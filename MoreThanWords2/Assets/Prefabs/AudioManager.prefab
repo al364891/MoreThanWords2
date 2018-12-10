@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1082673739304598}
+  m_IsPrefabAsset: 1
+--- !u!1 &1082673739304598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4513682802761546}
+  - component: {fileID: 114899713544646140}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4513682802761546
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1082673739304598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5791552, y: -0.07271964, z: -0.00013822736}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114899713544646140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1082673739304598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c775c3a1715b964a9563d2cfe71cd24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: soundTrack
+    clip: {fileID: 8300000, guid: 0cf33ba573d85bc4489211d72a6c6933, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: kallumDeath
+    clip: {fileID: 8300000, guid: 9eb4eb16c8a4542f5bf83b467616344b, type: 3}
+    volume: 0.814
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: iceElementPickUp
+    clip: {fileID: 8300000, guid: b84444092a6534b46bf92060ff0566b2, type: 3}
+    volume: 0.817
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: fireElementPickUp
+    clip: {fileID: 8300000, guid: d223dfb5b93ccf5419266ffdcb230110, type: 3}
+    volume: 0.835
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: fireUse
+    clip: {fileID: 8300000, guid: b9bd2131805c4ac4b8926c2558760e93, type: 3}
+    volume: 0.6
+    pitch: 0.85
+    loop: 0
+    source: {fileID: 0}
+  - name: iceUse
+    clip: {fileID: 8300000, guid: b9bd2131805c4ac4b8926c2558760e93, type: 3}
+    volume: 0.6
+    pitch: 1.15
+    loop: 0
+    source: {fileID: 0}
+  - name: usingMagic
+    clip: {fileID: 8300000, guid: 15f0d9b21c5101448901aaf6b979cb8a, type: 3}
+    volume: 0.104
+    pitch: 2.5
+    loop: 1
+    source: {fileID: 0}
+  - name: magicStop
+    clip: {fileID: 8300000, guid: 15f0d9b21c5101448901aaf6b979cb8a, type: 3}
+    volume: 0.163
+    pitch: 0.93
+    loop: 0
+    source: {fileID: 0}
+  - name: floorImpact
+    clip: {fileID: 8300000, guid: 96787588d2eeda248a585eb675ddd799, type: 3}
+    volume: 0.151
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: swordImpact
+    clip: {fileID: 8300000, guid: d6d1f66a62db14744a994749cbaec1db, type: 3}
+    volume: 0.392
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: swordAir
+    clip: {fileID: 8300000, guid: 89d96ea7a4f5b814caa7a55c51f3c6ca, type: 3}
+    volume: 0.287
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: keyPickUp
+    clip: {fileID: 8300000, guid: f38c1b874d306dc4e9b96bb3ebfa6a0d, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: keysCollected
+    clip: {fileID: 8300000, guid: bad23329e5ec8ca439989fc9c071dff2, type: 3}
+    volume: 0.85
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: menuSelection
+    clip: {fileID: 8300000, guid: 02dd12fb95c456c49a33eb0d9585dc3d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: swordParry
+    clip: {fileID: 8300000, guid: ddbe76c3b770b46438a0065a2e0031ce, type: 3}
+    volume: 0.804
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
