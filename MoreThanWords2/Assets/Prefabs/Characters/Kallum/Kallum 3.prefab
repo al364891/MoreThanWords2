@@ -2286,6 +2286,7 @@ MonoBehaviour:
   health: {fileID: 0}
   kallumAtttackRange: 2
   animator: {fileID: 95191239731556742}
+  isDeathCheck: 0
 --- !u!114 &114220992648882254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2817,9 +2818,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 0}
   controller: {fileID: 114110390852538020}
-  animator: {fileID: 95191239731556742}
-  Rb: {fileID: 50053638279755726}
   runSpeed: 24
+  horizontalMove: 0
   playerIsCovering: 0
   isAttacking: 0
   activeMagic: 0
