@@ -698,6 +698,7 @@ GameObject:
   - component: {fileID: 114937735862164040}
   - component: {fileID: 114493403375250424}
   - component: {fileID: 114395188740600140}
+  - component: {fileID: 114052278070807778}
   m_Layer: 10
   m_Name: Kallum
   m_TagString: Player
@@ -1686,7 +1687,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1483849737879486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -98.7, y: 68.2, z: 0}
+  m_LocalPosition: {x: -102.3, y: 68.5, z: 0}
   m_LocalScale: {x: 1.0805331, y: 1.0940399, z: 1.0803645}
   m_Children:
   - {fileID: 4800964827355158}
@@ -1875,7 +1876,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047257718900232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.161888, y: -17.287485, z: 0}
+  m_LocalPosition: {x: 10.70386, y: -24.356308, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 4611891431867520}
@@ -2516,6 +2517,20 @@ MonoBehaviour:
   m_SortingOrder: 0
   m_Bones: []
   m_BoneTransforms: []
+--- !u!114 &114052278070807778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1483849737879486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f414c343a8f05418cbe3ad5c7d5410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 20
+  maxSpeed: 35
+  health: {fileID: 114944800427414204}
 --- !u!114 &114064896829348578
 MonoBehaviour:
   m_ObjectHideFlags: 1
