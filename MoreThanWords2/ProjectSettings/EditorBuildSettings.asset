@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Official/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
     path: Assets/Scenes/TestEnemies.unity
@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/PersonalWork/Ruben/RubenLevel0.unity
+    guid: 32dab95698c574d4a8eac232dd610732
+  - enabled: 1
+    path: Assets/PersonalWork/Ruben/ScoreScene.unity
+    guid: 1c9aac73576b94949aa88c99e7a17542
   m_configObjects: {}

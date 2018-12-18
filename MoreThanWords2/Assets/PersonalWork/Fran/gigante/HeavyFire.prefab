@@ -1276,6 +1276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 150
+  points: 10
   enemyMagic: 1
 --- !u!114 &114585554089894170
 MonoBehaviour:

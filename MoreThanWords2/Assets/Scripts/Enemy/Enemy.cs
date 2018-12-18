@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     public int enemyHealth = 100;
+    public int points = 10;
 	public enum enemyType {NEUTRAL, FIRE, ICE};
 	public enemyType enemyMagic;
     /*private NPCPatrolController2D controller;
@@ -14,12 +15,16 @@ public class Enemy : MonoBehaviour {
     [SerializeField] private Player player;
     private AttackCalculate calculations;*/
 
-    /*void Start()
+    private GameObject pointManager;
+
+    void Start()
     {
-        calculations = player.GetComponent<AttackCalculate>();
+        pointManager = GameObject.FindGameObjectWithTag("Manager");
+
+        /*calculations = player.GetComponent<AttackCalculate>();
         controller = this.GetComponent<NPCPatrolController2D>();
-        playerLayer = LayerMask.GetMask ("Player");
-    }*/
+        playerLayer = LayerMask.GetMask ("Player");*/
+    }
 
     /*
     void Update ()
@@ -38,14 +43,16 @@ public class Enemy : MonoBehaviour {
 
     public void TakeDamage(int damage)
 	{
-		enemyHealth -= damage;
-		//print(damage + " damage taken!");
-		if (enemyHealth <= 0)
-		{
-            //print("dead");
-            //Destroy(gameObject);
-            this.GetComponent<NPCPatrolMovement>().Death();
-		}
+        if(enemyHealth> 0)
+        {
+            enemyHealth -= damage;
+            if (enemyHealth <= 0)
+            {
+                pointManager.GetComponent<ScoreManagerScript>().AddKillPoints(points);
+                this.GetComponent<NPCPatrolMovement>().Death();
+                //print(damage + " damage taken!");
+            }
+        }
 	}
 
 

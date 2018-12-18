@@ -48,7 +48,21 @@ public class ArrowCollision : MonoBehaviour {
         }
         else if (collision.transform.tag == "Player" && collision.transform.GetComponent<Player>().GetPlayerIsCovering()) //PLAYER IS COVERING
         {
-			if (!((Math.Abs(collision.gameObject.transform.rotation.eulerAngles.y) <= 0.01f && this.gameObject.transform.rotation.eulerAngles.z > 90) || ((int)Mathf.Abs(collision.gameObject.transform.rotation.eulerAngles.y) == (int)180 && this.gameObject.transform.rotation.eulerAngles.z < 90) || ((int)Mathf.Abs(collision.gameObject.transform.rotation.eulerAngles.y) == (int)180 && this.gameObject.transform.rotation.eulerAngles.z > 270)))
+
+            //Debug.Log(this.gameObject.transform.rotation.eulerAngles.z);
+
+            if (((int)Mathf.Abs(collision.gameObject.transform.rotation.eulerAngles.y) == (int)180 && (this.gameObject.transform.rotation.eulerAngles.z < 90 || this.gameObject.transform.rotation.eulerAngles.z > 270)) || ((int)Mathf.Abs(collision.gameObject.transform.rotation.eulerAngles.y) == (int)0 && (this.gameObject.transform.rotation.eulerAngles.z < 270 && this.gameObject.transform.rotation.eulerAngles.z > 90)))
+            {
+                this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -0.2f);
+                this.gameObject.layer = 11;
+            }
+            else
+            {
+                collision.gameObject.GetComponent<AttackCalculate>().RecieveDamage(enemyReference.GetComponent<Enemy>());
+                Destroy(this.gameObject);
+            }
+
+            /*if (!((Math.Abs(collision.gameObject.transform.rotation.eulerAngles.y) <= 0.01f && this.gameObject.transform.rotation.eulerAngles.z > 90) || ((int)Mathf.Abs(collision.gameObject.transform.rotation.eulerAngles.y) == (int)180 && this.gameObject.transform.rotation.eulerAngles.z < 90) || ((int)Mathf.Abs(collision.gameObject.transform.rotation.eulerAngles.y) == (int)180 && this.gameObject.transform.rotation.eulerAngles.z > 270)))
             {
                 collision.gameObject.GetComponent<AttackCalculate>().RecieveDamage(enemyReference.GetComponent<Enemy>());
                 Destroy(this.gameObject);
@@ -57,7 +71,7 @@ public class ArrowCollision : MonoBehaviour {
             {
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -0.2f);
                 this.gameObject.layer = 11;
-            }
+            }*/
 
 			//Debug.Log (collision.gameObject.transform.rotation.eulerAngles.y);
 			//Debug.Log (this.gameObject.transform.rotation.eulerAngles.z);
