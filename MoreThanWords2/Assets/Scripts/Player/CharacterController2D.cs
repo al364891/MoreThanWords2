@@ -15,7 +15,7 @@ public class CharacterController2D : MonoBehaviour
     public bool m_FacingRight = true; // For determining which way the player is currently facing.
     private Vector3 velocity = Vector3.zero;
 
-    private bool bouncing;
+    [HideInInspector] public bool bouncing;
     private float bounceVelocityX;
 
     private void Awake()

@@ -1,14 +1,23 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDeathOnCollision : MonoBehaviour {
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+public class PlayerDeathOnCollision : MonoBehaviour
+{
+    GameObject collided;
+
+
+    private void OnCollisionEnter2D (Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        collided = collision.gameObject;
+
+        if (collided.tag == "Player")
         {
-            collision.gameObject.GetComponent<AttackCalculate>().health.CurrentValue = 0;
+            collided.GetComponent<AttackCalculate>().health.CurrentValue = 0;
+            collided.GetComponent<CharacterController2D>().bouncing = false;
         }
     }
 }
