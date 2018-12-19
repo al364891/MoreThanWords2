@@ -2216,6 +2216,7 @@ MonoBehaviour:
     m_Bits: 256
   m_GroundCheck: {fileID: 4738637845501430}
   m_FacingRight: 1
+  bouncing: 0
 --- !u!114 &114111646219771236
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -817,6 +817,10 @@ Prefab:
       propertyPath: limiteInferior
       value: -35
       objectReference: {fileID: 0}
+    - target: {fileID: 4611891431867520, guid: 8b9da5e6ee5dc50419673c29e8baaa48, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -95.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b9da5e6ee5dc50419673c29e8baaa48, type: 2}
   m_IsPrefabAsset: 0
@@ -921,7 +925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &668944450
 Transform:
   m_ObjectHideFlags: 0
