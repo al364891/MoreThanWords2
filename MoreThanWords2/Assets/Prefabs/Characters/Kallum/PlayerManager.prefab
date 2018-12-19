@@ -3867,6 +3867,7 @@ MonoBehaviour:
   FollowSpeed: 2
   limitH: 4
   limitV: 3
+  limiteInferior: -30
   Target: {fileID: 4611891431867520}
 --- !u!114 &114876126158958132
 MonoBehaviour:
@@ -3898,6 +3899,7 @@ MonoBehaviour:
   FollowSpeed: 2
   limitH: 0
   limitV: 0
+  limiteInferior: -9999
   Target: {fileID: 4611891431867520}
 --- !u!114 &114888038155383946
 MonoBehaviour:

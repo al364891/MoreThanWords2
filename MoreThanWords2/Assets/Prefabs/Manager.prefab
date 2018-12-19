@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4412769948753080}
   - component: {fileID: 114245605269242630}
   - component: {fileID: 114329228130337882}
+  - component: {fileID: 114144095586631684}
   m_Layer: 0
   m_Name: Manager
-  m_TagString: Untagged
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,12 +36,28 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1522166155500342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 75.602745, y: 39.44771, z: -0.9375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114144095586631684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1522166155500342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4025b38ea5cdc4eba3c39d03c3ef6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: 
+  totalScore: 0
+  killScore: 0
+  negativeScore: 0
+  timeScore: 0
 --- !u!114 &114245605269242630
 MonoBehaviour:
   m_ObjectHideFlags: 1

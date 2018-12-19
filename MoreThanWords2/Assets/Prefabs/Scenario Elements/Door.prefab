@@ -38,10 +38,10 @@ GameObject:
   - component: {fileID: 212194084146060264}
   - component: {fileID: 95615253594437058}
   - component: {fileID: 61994519575410152}
-  - component: {fileID: 114116540420314620}
+  - component: {fileID: 114031357550246874}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: doorLevel0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1919909644658738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.94, y: -15.11, z: 0}
+  m_LocalPosition: {x: 48.774002, y: -19.630001, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4253747968378848}
@@ -131,7 +131,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114116540420314620
+--- !u!114 &114031357550246874
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,9 +139,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1919909644658738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac6407159360204a95935ca5b9f221a, type: 3}
+  m_Script: {fileID: 11500000, guid: 805aa440b3ba2ad45bb1c72ba4d7beb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  siguienteEscena: Level1
 --- !u!212 &212194084146060264
 SpriteRenderer:
   m_ObjectHideFlags: 1
