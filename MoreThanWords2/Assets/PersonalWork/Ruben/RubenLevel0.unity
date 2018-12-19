@@ -342,7 +342,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 318336938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab88f99af20006f47a6fbf45e4fb177f, type: 3}
+  m_Script: {fileID: 11500000, guid: ca4025b38ea5cdc4eba3c39d03c3ef6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NextScene: 
@@ -1840,10 +1840,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1862455431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99de31328ff846c449228e2cf12108d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 805aa440b3ba2ad45bb1c72ba4d7beb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguienteEscena: Level0
+  siguienteEscena: Level1
 --- !u!1001 &2072499299
 Prefab:
   m_ObjectHideFlags: 0
