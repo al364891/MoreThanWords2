@@ -50,7 +50,7 @@ public class ElementIconEffect : MonoBehaviour {
             {
                 timeE = time;
                 newMagic2 = false;
-                player.iceParticles.SetActive(false);
+				player.IceParticles(false);
             }
 
             //When element is activated and the currentelement is the same reset duration time
@@ -63,7 +63,7 @@ public class ElementIconEffect : MonoBehaviour {
             //activate image, partical and effects
             this.GetComponent<Image>().enabled = true;
             this.GetComponent<Image>().sprite = myFirstImage;
-            player.fireParticles.SetActive(true);
+			player.FireParticles(true);
 
             //This is only a time counter
             if (timeFlag != false)
@@ -79,7 +79,7 @@ public class ElementIconEffect : MonoBehaviour {
                 player.beNeutral();
                 timeE = time;
                 newMagic1 = false;
-                player.fireParticles.SetActive(false);
+				player.FireParticles(false);
 				FindObjectOfType<AudioManager>().Stop("usingMagic");
 				FindObjectOfType<AudioManager>().Play("magicStop");
             }
@@ -91,7 +91,7 @@ public class ElementIconEffect : MonoBehaviour {
             if (newMagic1 != false) {
                 timeE = time;
                 newMagic1 = false;
-                player.fireParticles.SetActive(false);
+				player.FireParticles(false);
             }
 
             if (player.ReFreshMagic != false) {
@@ -100,7 +100,7 @@ public class ElementIconEffect : MonoBehaviour {
             }
             this.GetComponent<Image>().enabled = true;
             this.GetComponent<Image>().sprite = mySecondImage;
-            player.iceParticles.SetActive(true);
+			player.IceParticles(true);
 
             if (timeFlag != false)
             {
@@ -113,7 +113,7 @@ public class ElementIconEffect : MonoBehaviour {
                 player.beNeutral();
                 timeE = time;
                 newMagic2 = false;
-                player.iceParticles.SetActive(false);
+				player.IceParticles(false);
 				FindObjectOfType<AudioManager>().Stop("usingMagic");
 				FindObjectOfType<AudioManager>().Play("magicStop");
             }

@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Health health;
 
-    private int startHealth = 100;
+	private int startHealth;
 
 	private AttackCalculate AttackCalc; //script that makes attack calcules
 
@@ -25,11 +25,9 @@ public class Player : MonoBehaviour
 
 	[HideInInspector] public float horizontalMove = 0f; //from -1 to 1
 	bool jump = false;
-	[SerializeField] private bool playerIsCovering = false;
+	private bool playerIsCovering = false;
+	private bool isAttacking;
 
-	private float attackPower = 1f;
-
-	[SerializeField] private bool isAttacking;
 	[HideInInspector] public enum playerMagic {NEUTRAL, FIRE, ICE};
 	[HideInInspector] public playerMagic activeMagic;
 	[HideInInspector] public playerMagic storedMagic;
@@ -54,14 +52,15 @@ public class Player : MonoBehaviour
     private Image elementIcon;
 
     //numbers of key in on map, has to put manuell
-    [SerializeField]
-    private int keyOnMap;
+    [SerializeField] private int keyOnMap;
 
     //numbers of the collected key
-	[HideInInspector] public int collectedKey = 0;
+	[HideInInspector] public int collectedKey;
 
-	public GameObject fireParticles;
-	public GameObject iceParticles;
+	GameObject fireParticles;
+	GameObject iceParticles;
+	GameObject emberIceParticles;
+	GameObject emberFireParticles;
 
 	[HideInInspector]public bool ElementFlag = false;
 
@@ -75,15 +74,28 @@ public class Player : MonoBehaviour
 
 	//invoke it with eventName.Invoke();*/
 
-
+	void Awake()
+	{
+		isAttacking = false;
+		collectedKey = 0;
+		startHealth = 100;
+	}
 
 	void Start()
 	{
+		iceParticles = GameObject.Find("IceParticles");
+		emberIceParticles = GameObject.Find("EmberIceParticles");
+		fireParticles = GameObject.Find("FireParticles");
+		emberFireParticles = GameObject.Find("EmberFireParticles");
+
 		animator = GetComponent<Animator>();
 		AttackCalc = GetComponent<AttackCalculate>();
-		isAttacking = false;
+
         health.setHealth(startHealth, startHealth);
 		Rb = GetComponent<Rigidbody2D>();
+
+		IceParticles(false);
+		FireParticles(false);
     }
 
 	// Update is called once per frame
@@ -277,5 +289,17 @@ public class Player : MonoBehaviour
 		animator.SetBool(name,true);
 		yield return new WaitForSeconds (0.3f);
 		animator.SetBool(name,false);
+	}
+
+	public void IceParticles(bool activated)
+	{
+		iceParticles.GetComponent<ParticleSystem>().enableEmission = activated;
+		emberIceParticles.GetComponent<ParticleSystem>().enableEmission = activated;
+	}
+
+	public void FireParticles(bool activated)
+	{
+		fireParticles.GetComponent<ParticleSystem>().enableEmission = activated;
+		emberFireParticles.GetComponent<ParticleSystem>().enableEmission = activated;
 	}
 }
