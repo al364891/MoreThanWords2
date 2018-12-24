@@ -22,11 +22,17 @@ public class AttackCalculate : MonoBehaviour {
 	private bool hitParry = false;
 	private bool playerIsStunned = false;
 
+    /*private bool flash;
+    private float flashLength, flashCounter;
+    private SpriteMeshType[] sprites;*/
+
 	void Start () {
 		controller = GetComponent<CharacterController2D>();
 		player = GetComponent<Player>();
 		comboCD = comboCDStart;
 		Rb = GetComponent<Rigidbody2D>();
+        /*flashLength = 1f;
+        sprites = GetComponentsInChildren<SpriteMeshType>();*/
 	}
 
 	void Update()
@@ -101,7 +107,48 @@ public class AttackCalculate : MonoBehaviour {
 				}
 
 			}
-		}//if (!isDeathCheck)
+
+            /*if (flash == true)
+            {
+                int section = (int) (flashCounter / (0.33f * flashLength));
+
+                if (section % 2 == 0)
+                {
+                    for (int i = 0; i < sprites.Length; i += 1)
+                    {
+                        sprites[i].enabled = false;
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < sprites.Length; i += 1)
+                    {
+                        sprites[i].enabled = true;
+                    }
+                }
+                if (flashCounter > flashLength * 0.66f)
+                {
+                    for (int i = 0; i < sprites.Length; i += 1)
+                    {
+                        sprites[i].enabled = false;
+                    }
+                }
+                else if (flashCounter > flashLength * 0.33f)
+                {
+                    for (int i = 0; i < sprites.Length; i += 1)
+                    {
+                        sprites[i].enabled = false;
+                    }
+                }
+
+                if (flashCounter < 0)
+                {
+                    flash = false;
+                }
+
+                flashCounter -= Time.deltaTime;
+            }*/
+		}
 
 
 		//Test health
@@ -222,6 +269,9 @@ public class AttackCalculate : MonoBehaviour {
 		//animator
 		StartCoroutine(player.ShortAnimationPlay("Hit"));
 		health.CurrentValue -= damage;
+
+        /*flash = true;
+        flashCounter = flashLength;*/
 	}
 
 	void SetDeathState()
