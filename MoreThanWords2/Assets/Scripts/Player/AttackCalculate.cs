@@ -22,18 +22,30 @@ public class AttackCalculate : MonoBehaviour {
 	private bool hitParry = false;
 	private bool playerIsStunned = false;
 
-    /*private bool flash;
+    private bool flash;
     private float flashLength, flashCounter;
-    private SpriteMeshType[] sprites;*/
+    private GameObject sprites;
 
-	void Start () {
-		controller = GetComponent<CharacterController2D>();
-		player = GetComponent<Player>();
-		comboCD = comboCDStart;
-		Rb = GetComponent<Rigidbody2D>();
-        /*flashLength = 1f;
-        sprites = GetComponentsInChildren<SpriteMeshType>();*/
-	}
+
+    void Start()
+    {
+        controller = GetComponent<CharacterController2D>();
+        player = GetComponent<Player>();
+        comboCD = comboCDStart;
+        Rb = GetComponent<Rigidbody2D>();
+        flashLength = 1f;
+        Transform test;
+        for (int i = 0; i < this.transform.childCount; i += 1)
+        {
+            test = this.transform.GetChild(i);
+            if (test.name == "Sprites")
+            {
+                sprites = test.gameObject;
+                break;
+            }
+        }
+    }
+
 
 	void Update()
 	{
@@ -108,25 +120,20 @@ public class AttackCalculate : MonoBehaviour {
 
 			}
 
-            /*if (flash == true)
+            // Make Kallum flash if he's been hit.
+            if (flash == true)
             {
-                int section = (int) (flashCounter / (0.33f * flashLength));
+                int section = (int) (flashCounter / (0.2f * flashLength));
 
                 if (section % 2 == 0)
                 {
-                    for (int i = 0; i < sprites.Length; i += 1)
-                    {
-                        sprites[i].enabled = false;
-                    }
+                    sprites.SetActive (true);
                 }
                 else
                 {
-                    for (int i = 0; i < sprites.Length; i += 1)
-                    {
-                        sprites[i].enabled = true;
-                    }
+                    sprites.SetActive (false);
                 }
-                if (flashCounter > flashLength * 0.66f)
+                /*if (flashCounter > flashLength * 0.66f)
                 {
                     for (int i = 0; i < sprites.Length; i += 1)
                     {
@@ -139,15 +146,15 @@ public class AttackCalculate : MonoBehaviour {
                     {
                         sprites[i].enabled = false;
                     }
-                }
+                }*/
+
+                flashCounter -= Time.deltaTime;
 
                 if (flashCounter < 0)
                 {
                     flash = false;
                 }
-
-                flashCounter -= Time.deltaTime;
-            }*/
+            }
 		}
 
 
@@ -270,8 +277,8 @@ public class AttackCalculate : MonoBehaviour {
 		StartCoroutine(player.ShortAnimationPlay("Hit"));
 		health.CurrentValue -= damage;
 
-        /*flash = true;
-        flashCounter = flashLength;*/
+        flash = true;
+        flashCounter = flashLength;
 	}
 
 	void SetDeathState()
