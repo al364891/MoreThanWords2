@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour {
 	public enum enemyType {NEUTRAL, FIRE, ICE};
 	public enemyType enemyMagic;
     private Rigidbody2D rb;
-    private Player player;
+    [HideInInspector] public Player player;
     /*private NPCPatrolController2D controller;
     private int direction;
     public float giantAttackRange;
@@ -19,31 +19,48 @@ public class Enemy : MonoBehaviour {
 
     private GameObject pointManager;
 
-    void Start()
+    private bool flash;
+    private float flashCounter;
+    [SerializeField] private float flashLength;
+    private GameObject sprites;
+
+    void Start ()
     {
         pointManager = GameObject.FindGameObjectWithTag("Manager");
         rb = this.GetComponent<Rigidbody2D> ();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player> ();
 
+        flash = false;
+        flashLength = 0.5f;
+        Transform test;
+        for (int i = 0; i < this.transform.childCount; i += 1)
+        {
+            test = this.transform.GetChild (i);
+            if (test.name == "Sprites")
+            {
+                sprites = test.gameObject;
+                break;
+            }
+        }
         /*calculations = player.GetComponent<AttackCalculate>();
         controller = this.GetComponent<NPCPatrolController2D>();
         playerLayer = LayerMask.GetMask ("Player");*/
     }
 
-    /*
+    
     void Update ()
     {
-        if (controller.m_FacingRight) //direction of the ray
+        // Make the enemy flash if he's been hit.
+        if (flash == true)
         {
-            direction = 1;
-        }
-        else
-        {
-            direction = -1;
-        }
+            flashCounter = this.GetComponent<Flash>().FlashNow (flashCounter, flashLength, sprites);
 
-        hitInfo = Physics2D.Raycast(transform.position, Vector2.right * direction, giantAttackRange, playerLayer);
-    }*/
+            if (flashCounter < 0)
+            {
+                flash = false;
+            }
+        }
+    }
 
     public void TakeDamage(int damage)
 	{
@@ -55,6 +72,11 @@ public class Enemy : MonoBehaviour {
                 pointManager.GetComponent<ScoreManagerScript>().AddKillPoints(points);
                 this.GetComponent<NPCPatrolMovement>().Death();
                 //print(damage + " damage taken!");
+            }
+            else
+            {
+                flash = true;
+                flashCounter = flashLength;
             }
 
             if (player.transform.position.x < this.transform.position.x)

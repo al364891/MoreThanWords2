@@ -9,7 +9,7 @@ public class NPCGiantAttack : Attacker
     private int direction;
     public float giantAttackRange;
     public LayerMask playerLayer;
-    [SerializeField] private Player player;
+    private Player player;
     private AttackCalculate calculations;
     private RaycastHit2D hitInfo;
     private float x;
@@ -18,6 +18,7 @@ public class NPCGiantAttack : Attacker
 
     void Start ()
     {
+        player = this.GetComponent<Enemy>().player;
         calculations = player.GetComponent<AttackCalculate> ();
         controller = this.GetComponent<NPCPatrolController2D> ();
         playerLayer = LayerMask.GetMask ("Player");

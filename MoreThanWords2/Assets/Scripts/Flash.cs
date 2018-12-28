@@ -1,5 +1,5 @@
 ﻿
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,39 +7,37 @@ using UnityEngine;
 
 public class Flash : MonoBehaviour
 {
-    private Color normal, flash;
-    private Renderer gameMesh;
-    private float delay;
-    private int timesToFlash;
+    private int part;
 
-    
+
     // Use this for initialization
-	void Start ()
+	/*void Start ()
     {
-        normal = Color.white;
-        flash = Color.red;
-        delay = 0.025f;
-        timesToFlash = 3;
-	}
+	}*/
 
 
-    public void FlashNow ()
-    {
-        var renderer = gameMesh;
-
-        for (int i = 1; i <= timesToFlash; i += 1)
-        {
-            renderer.material.color = flash;
-            yield return new WaitForSeconds (delay);
-            renderer.material.color = normal;
-            yield return new WaitForSeconds (delay);
-        }
-    }
-	
-
-	// Update is called once per frame
+    /*// Update is called once per frame
 	void Update ()
     {
-		
-	}
-}*/
+	}*/
+
+
+    // Causes Kallum or any enemy to flash if he's been hit during a certain amount of time that is received as a parameter. The function returns a float to update the 'flashCounter' parameter of the character.
+    public float FlashNow (float flashCounter, float flashLength, GameObject sprites)
+    {
+        part = (int) (flashCounter / (0.2f * flashLength));
+
+        if (part % 2 == 0)
+        {
+            sprites.SetActive (true);
+        }
+        else
+        {
+            sprites.SetActive (false);
+        }
+
+        flashCounter -= Time.deltaTime;
+
+        return flashCounter;
+    }
+}
