@@ -3273,6 +3273,7 @@ MonoBehaviour:
   keyOnMap: 2
   collectedKey: 0
   ElementFlag: 0
+  finished: 0
 --- !u!114 &114494491863539426
 MonoBehaviour:
   m_ObjectHideFlags: 1

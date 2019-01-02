@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
 
 	void Start()
 	{
-		iceParticles = GameObject.Find("IceParticles");
+        iceParticles = GameObject.Find("IceParticles");
 		emberIceParticles = GameObject.Find("EmberIceParticles");
 		fireParticles = GameObject.Find("FireParticles");
 		emberFireParticles = GameObject.Find("EmberFireParticles");
@@ -123,8 +123,15 @@ public class Player : MonoBehaviour
 				}
             }
 
-			//if !isAttacking to avoid moving while attacking
-			horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; //outside the if !cover to avoid keep moving when run and cover bug
+            //if !isAttacking to avoid moving while attacking
+            if (controller.finished == true)
+            {
+                horizontalMove = 0;
+            }
+            else
+            {
+                horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; //outside the if !cover to avoid keep moving when run and cover bug
+            }
             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
             animator.SetFloat("VelocityY", Rb.velocity.y); //detects the Y speed for jump animation
             bool jumpButton = Input.GetButtonDown("Jump");

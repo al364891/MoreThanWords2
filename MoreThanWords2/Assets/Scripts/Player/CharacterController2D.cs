@@ -18,6 +18,8 @@ public class CharacterController2D : MonoBehaviour
     [HideInInspector] public bool bouncing;
     private float bounceVelocityX;
 
+    [HideInInspector] public bool finished;
+
     private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -25,6 +27,7 @@ public class CharacterController2D : MonoBehaviour
 		m_Grounded = false;
         m_AirControl = true;
         bouncing = false;
+        finished = false;
         /* //FOR THE EVENT
 		if (eventName == null)
 			eventName = new UnityEvent();
@@ -74,7 +77,14 @@ public class CharacterController2D : MonoBehaviour
                 targetVelocity = new Vector2(movement, m_Rigidbody2D.velocity.y);
             }
             // And then smoothing it out and applying it to the character
-            m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref velocity, m_MovementSmoothing);
+            if (finished == true)
+            {
+                m_Rigidbody2D.velocity = new Vector2 (0, m_Rigidbody2D.velocity.y);
+            }
+            else
+            {
+                m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref velocity, m_MovementSmoothing);
+            }
 
 			// If the input is moving the player right and the player is facing left or if the input is moving the player left and the player is facing right...
 			if ((move > 0 && !m_FacingRight) || (move < 0 && m_FacingRight))
@@ -84,7 +94,7 @@ public class CharacterController2D : MonoBehaviour
             }
         }
         // If the player should jump...
-        if (m_Grounded && jump)
+        if (m_Grounded && jump && finished == false)
         {
             // Add a vertical force to the player.
             m_Grounded = false;

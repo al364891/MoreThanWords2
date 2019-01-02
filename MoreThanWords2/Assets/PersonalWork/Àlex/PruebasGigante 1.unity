@@ -18216,19 +18216,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 577343431}
   controller: {fileID: 1021213144}
-  animator: {fileID: 1021213143}
-  Rb: {fileID: 1021213142}
   runSpeed: 24
-  playerIsCovering: 0
-  isAttacking: 0
+  horizontalMove: 0
   activeMagic: 0
   storedMagic: 1
   magicTime: 20
   keyNumber: {fileID: 1272816307}
+  powerUp: {fileID: 0}
   elementIcon: {fileID: 0}
   keyOnMap: 3
-  fireParticles: {fileID: 940837615}
-  iceParticles: {fileID: 40913869}
+  collectedKey: 0
+  ElementFlag: 0
+  finished: 0
 --- !u!50 &1021213142
 Rigidbody2D:
   serializedVersion: 4
@@ -18289,6 +18288,7 @@ MonoBehaviour:
     m_Bits: 256
   m_GroundCheck: {fileID: 130688519}
   m_FacingRight: 1
+  bouncing: 0
 --- !u!114 &1021213145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18319,6 +18319,8 @@ MonoBehaviour:
   health: {fileID: 577343431}
   kallumAtttackRange: 2
   animator: {fileID: 1021213143}
+  isDeathCheck: 0
+  flashLength: 0
 --- !u!114 &1021213147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18331,6 +18333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4483860f71c7944bdcec65f29b239f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!58 &1021213148
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27251,6 +27254,36 @@ Prefab:
     - target: {fileID: 4282565542146162, guid: 550bae01af6d4e84ca394fe8c06c9029, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 137541516129160426, guid: 550bae01af6d4e84ca394fe8c06c9029,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 137584398639211246, guid: 550bae01af6d4e84ca394fe8c06c9029,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 137202914206948364, guid: 550bae01af6d4e84ca394fe8c06c9029,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 137916306914379430, guid: 550bae01af6d4e84ca394fe8c06c9029,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 137512753483135908, guid: 550bae01af6d4e84ca394fe8c06c9029,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 137619454908686566, guid: 550bae01af6d4e84ca394fe8c06c9029,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 550bae01af6d4e84ca394fe8c06c9029, type: 2}

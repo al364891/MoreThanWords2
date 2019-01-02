@@ -19,7 +19,7 @@ public class InformationScript : MonoBehaviour {
     {
         manager = GameObject.FindGameObjectWithTag("Manager");
         scoreManager = (ScoreManagerScript)FindObjectOfType(typeof(ScoreManagerScript));
-        Debug.Log(scoreManager);
+        //Debug.Log(scoreManager);
 
         totalScore.text = "Total Score: " + scoreManager.getTotalScore();
         killScore.text = "Killing Points: " + scoreManager.getKillScore();
