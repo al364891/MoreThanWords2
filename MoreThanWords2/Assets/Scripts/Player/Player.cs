@@ -179,18 +179,18 @@ public class Player : MonoBehaviour
 					jump = true;
 			}
 					
-				/*
+				
                 if (Input.GetButtonDown("Cover") && horizontalMove == 0 && Rb.velocity.y == 0) //if we press cover and we are not moving
                 {
                     playerIsCovering = true;
                     animator.SetBool("IsCovering", true);
-                }*/
-			/*
+                }
+			
             if (Input.GetButtonUp("Cover") && playerIsCovering) //stop covering
             {
                 playerIsCovering = false;
                 animator.SetBool("IsCovering", false);
-            }*/
+            }
 
 
 		}//if (!animator.GetBool("Death"))
