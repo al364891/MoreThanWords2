@@ -25,26 +25,31 @@ public class AttackCalculate : MonoBehaviour {
     private bool flash;
     private float flashCounter;
     [SerializeField] private float flashLength;
-    private GameObject sprites;
+    [SerializeField] private int parts;
+    //private Transform[] children;
+    private Transform[] sprites;
 
 
     void Start()
     {
-        controller = GetComponent<CharacterController2D>();
-        player = GetComponent<Player>();
+        controller = GetComponent<CharacterController2D> ();
+        player = GetComponent<Player> ();
         comboCD = comboCDStart;
-        Rb = GetComponent<Rigidbody2D>();
+        Rb = GetComponent<Rigidbody2D> ();
         flash = false;
         flashLength = 1f;
-        Transform test;
-        for (int i = 0; i < this.transform.childCount; i += 1)
+        sprites = GetComponentsInChildren<Transform> ();
+        /*int i = 0;
+        while (sprites.Length > parts)
         {
-            test = this.transform.GetChild(i);
-            if (test.name == "Sprites")
-            {
-                sprites = test.gameObject;
-                break;
-            }
+            sprites[i] = this.transform.GetChild(i);
+            //sprites[i] = child.gameObject;
+            print(sprites[i].gameObject.name);
+            i += 1;
+        }*/
+        foreach (Transform child in sprites)
+        {
+           print (child.gameObject.name);
         }
     }
 
@@ -125,7 +130,7 @@ public class AttackCalculate : MonoBehaviour {
             // Make Kallum flash if he's been hit.
             if (flash == true)
             {
-                flashCounter = this.GetComponent<Flash>().FlashNow (flashCounter, flashLength, sprites);
+                flashCounter = this.GetComponent<Flash>().PlayerFlash (flashCounter, flashLength, sprites, parts);
                 /*if (flashCounter > flashLength * 0.66f)
                 {
                     for (int i = 0; i < sprites.Length; i += 1)

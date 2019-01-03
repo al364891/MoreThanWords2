@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour {
         // Make the enemy flash if he's been hit.
         if (flash == true)
         {
-            flashCounter = this.GetComponent<Flash>().FlashNow (flashCounter, flashLength, sprites);
+            flashCounter = this.GetComponent<Flash>().EnemyFlash (flashCounter, flashLength, sprites);
 
             if (flashCounter < 0)
             {
