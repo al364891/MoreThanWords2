@@ -42,25 +42,24 @@ public class Flash : MonoBehaviour
     }
 
 
-    public float PlayerFlash (float flashCounter, float flashLength, Transform[] sprites, int parts)
+    public float PlayerFlash (float flashCounter, float flashLength, Transform[] sprites)
     {
-        parts += 1;
-        part = (int) (flashCounter / (0.2f * flashLength));
+        /*int part = (int) (flashCounter / (0.2f * flashLength));
+        bool activation;
 
         if (part % 2 == 0)
         {
-            for (int i = 1; i < parts; i += 1)
-            {
-                sprites[i].gameObject.SetActive (true);
-            }
+            activation = true;
         }
         else
         {
-            for (int i = 1; i < parts; i += 1)
-            {
-                sprites[i].gameObject.SetActive (false);
-            }
+            activation = false;
         }
+
+        foreach (Transform child in sprites)
+        {
+            child.gameObject.SetActive (activation);
+        }*/
 
         flashCounter -= Time.deltaTime;
 

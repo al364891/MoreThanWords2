@@ -26,8 +26,7 @@ public class AttackCalculate : MonoBehaviour {
     private float flashCounter;
     [SerializeField] private float flashLength;
     [SerializeField] private int parts;
-    //private Transform[] children;
-    private Transform[] sprites;
+    private Transform[] children;
 
 
     void Start()
@@ -38,19 +37,23 @@ public class AttackCalculate : MonoBehaviour {
         Rb = GetComponent<Rigidbody2D> ();
         flash = false;
         flashLength = 1f;
-        sprites = GetComponentsInChildren<Transform> ();
-        /*int i = 0;
-        while (sprites.Length > parts)
+        children = new Transform[parts];
+        for (int i = 0; i < parts; i += 1)
         {
-            sprites[i] = this.transform.GetChild(i);
-            //sprites[i] = child.gameObject;
-            print(sprites[i].gameObject.name);
-            i += 1;
-        }*/
-        foreach (Transform child in sprites)
-        {
-           print (child.gameObject.name);
+            if (i < parts - 1)
+            {
+                children[i] = this.transform.GetChild(i);
+            }
+            else
+            {
+                children[i] = this.transform.Find ("Bones");
+                //print (children[i].parent);
+            }
         }
+        /*foreach (Transform child in children)
+        {
+            print (child.name);
+        }*/
     }
 
 
@@ -130,7 +133,7 @@ public class AttackCalculate : MonoBehaviour {
             // Make Kallum flash if he's been hit.
             if (flash == true)
             {
-                flashCounter = this.GetComponent<Flash>().PlayerFlash (flashCounter, flashLength, sprites, parts);
+                flashCounter = this.GetComponent<Flash>().PlayerFlash (flashCounter, flashLength, children);
                 /*if (flashCounter > flashLength * 0.66f)
                 {
                     for (int i = 0; i < sprites.Length; i += 1)
