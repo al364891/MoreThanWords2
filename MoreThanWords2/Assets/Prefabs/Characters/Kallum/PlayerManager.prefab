@@ -3265,7 +3265,6 @@ MonoBehaviour:
   controller: {fileID: 114395188740600140}
   runSpeed: 24
   horizontalMove: 0
-  controllerHorizontalMove: 0
   activeMagic: 0
   storedMagic: 0
   magicTime: 20
