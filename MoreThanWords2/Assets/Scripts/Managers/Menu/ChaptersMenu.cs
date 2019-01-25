@@ -11,11 +11,42 @@ using UnityEngine;
 
 public class ChaptersMenu : MonoBehaviour
 {
-    private Button chapter2;
+    private Button[] chapters;
+    [SerializeField] MainMenu menu;
+    private int available;
+    private string levelToLoad;
 
 
-    void Awake ()
+    void Start ()
     {
+        chapters = new Button[4];
+        
+        switch (GameController.gameController.CheckLastUnlocked ())
+        {
+            case ("Level0"):
+                available = 1;
+                break;
+            case ("Level1"):
+                available = 2;
+                break;
+            case ("Level2"):
+                available = 3;
+                break;
+            case ("Level3"):
+                available = 4;
+                break;
+        }
+
+        for (int i = 0; i < chapters.Length; i += 1)
+        {
+            chapters[i] = this.transform.GetChild(i).GetComponent<Button> ();
+            if (i >= available)
+            {
+                chapters[i].interactable = false;
+                //print("Not accessible");
+            }
+        }
+
         /*if (GameController.gameController.CheckLastUnlocked () == 1)
         {
             chapter2 = GameObject.Find("Chapter2But").GetComponent<Button> ();
@@ -24,9 +55,10 @@ public class ChaptersMenu : MonoBehaviour
     }
 
 
-    private void LoadLevel (int level)
+    private void LoadLevel (int index)
     {
         GameController.gameController.UsedChapterSelection ();
-        SceneManager.LoadScene (level);
+        levelToLoad = "Level" + index.ToString ();
+        menu.transition.FadeToLevel (levelToLoad);
     }
 }

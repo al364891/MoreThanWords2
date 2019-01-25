@@ -12,8 +12,9 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController gameController;
-    [SerializeField] private GameObject mainMenu, optionsMainMenu, chaptersMainMenu;
-    [SerializeField] private Button load, chapters;
+    private GetChildren canvas;
+    [SerializeField] private GameObject mainMenu, optionsMainMenu, chaptersMainMenu, instructionsMenu;
+    private Button load, chapters;
     private string saveLocation;
     //private string settingsLocation;
     [HideInInspector] public bool save;
@@ -34,11 +35,7 @@ public class GameController : MonoBehaviour
         saveLocation = Application.persistentDataPath + "/Level.dat";
         //settingsLocation = Application.persistentDataPath + "Settings.dat";
         save = true;
-        findObjects = true;
-
-        optionsMainMenu.SetActive (true);
-        mainMenu.SetActive (true);
-        chaptersMainMenu.SetActive (false);
+        FindObjects ();
 
         if (gameController == null)
         {
@@ -50,7 +47,7 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (File.Exists(saveLocation) == false)
+        if (File.Exists (saveLocation) == false)
         {
             load.interactable = false;
             chapters.interactable = false;
@@ -71,24 +68,30 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X) == true)
+        if (Input.GetKeyDown (KeyCode.X) == true)
         {
-            Delete();
+            Delete ();
         }
 
         if (findObjects == true && SceneManager.GetActiveScene().name == "Menu")
         {
-            mainMenu = GameObject.Find ("MainMenuObj");
-            //chaptersMainMenu = GameObject.Find ("ChaptersMenuObj");
-            //chaptersMainMenu.SetActive (false);
-            optionsMainMenu = GameObject.Find ("OptionsMenu");
-            optionsMainMenu.SetActive (false);
-            load = GameObject.Find("ContinueBut").GetComponent<Button> ();
-            //chapters = GameObject.Find("ChaptersBut").GetComponent<Button> ();
-
-            findObjects = false;
-            print (findObjects);
+            FindObjects ();
         }
+    }
+
+
+    private void FindObjects ()
+    {
+        canvas = GameObject.Find("Canvas").GetComponent<GetChildren>();
+        mainMenu = canvas.mainMenu;
+        chaptersMainMenu = canvas.chaptersMainMenu;
+        optionsMainMenu = canvas.optionsMainMenu;
+        instructionsMenu = canvas.instructionsMenu;
+        load = canvas.load;
+        chapters = canvas.chapters;
+
+        findObjects = false;
+        //print (findObjects);
     }
 
 
@@ -185,12 +188,12 @@ public class GameController : MonoBehaviour
     }
 
 
-    public int CheckLastUnlocked()
+    public string CheckLastUnlocked()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         FileStream file = File.Open (saveLocation, FileMode.Open);
 
-        int last = (int) binaryFormatter.Deserialize(file);
+        string last = (string) binaryFormatter.Deserialize(file);
         file.Close();
 
         return last;

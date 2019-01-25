@@ -34,9 +34,16 @@ public class InformationScript : MonoBehaviour {
         Destroy(manager);
     }
 	
-    public void NextLevel()
+    public void NextLevel ()
     {
-        transition.FadeToLevel (nextScene);
+        if (GameController.gameController.save == true)
+        {
+            transition.FadeToLevel (nextScene);
+        }
+        else
+        {
+            transition.FadeToLevel ("Menu");
+        }
     }
 
 }
