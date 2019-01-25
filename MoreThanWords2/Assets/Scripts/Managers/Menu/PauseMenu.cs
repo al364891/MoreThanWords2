@@ -10,10 +10,15 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool paused = false;
     [SerializeField] private GameObject pauseMenu, mainPauseMenu, optionsPauseMenu;
+    private GameController gameController;
+    private Transition transition;
 
 
     void Awake ()
     {
+        transition = GameObject.Find("Transition").GetComponent<Transition>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController> ();
+
         pauseMenu.SetActive (false);
         mainPauseMenu.SetActive (false);
         optionsPauseMenu.SetActive (false);
@@ -23,7 +28,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) == true)
+        if (Input.GetKeyDown (KeyCode.Escape) == true)
         {
             if (paused == true)
             {
@@ -60,14 +65,15 @@ public class PauseMenu : MonoBehaviour
     public void RestartLevel ()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
+        transition.FadeToLevel (SceneManager.GetActiveScene().name);
     }
 
 
     public void LoadMenu ()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene (0);
+        transition.FadeToLevel ("Menu");
+        gameController.findObjects = true;
     }
 
 

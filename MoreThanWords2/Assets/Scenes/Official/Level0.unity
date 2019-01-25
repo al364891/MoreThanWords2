@@ -1933,6 +1933,11 @@ Prefab:
       propertyPath: levelKeys
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena
+      value: patata
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ac2d65eea81af74fa9addfdf23fb860, type: 2}
   m_IsPrefabAsset: 0

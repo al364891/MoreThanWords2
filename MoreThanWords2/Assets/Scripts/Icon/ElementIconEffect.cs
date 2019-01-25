@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class ElementIconEffect : MonoBehaviour {
 
-    [SerializeField]
+	CameraEffects ppEffects; //postprocessing
+	[SerializeField]
     private Player player;
     [SerializeField]
     public Sprite myFirstImage;
@@ -28,6 +29,7 @@ public class ElementIconEffect : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+		ppEffects = GetComponent<CameraEffects>();
         magicTime = GetComponent<Image>();
         time = player.magicTime;
         timeE = player.magicTime;
@@ -82,6 +84,7 @@ public class ElementIconEffect : MonoBehaviour {
 				player.FireParticles(false);
 				FindObjectOfType<AudioManager>().Stop("usingMagic");
 				FindObjectOfType<AudioManager>().Play("magicStop");
+				ppEffects.deactivateChromaticAberrationWithFade();//postProcessing
             }
         }
         else if (player.activeMagic.ToString() == "ICE")
@@ -116,6 +119,7 @@ public class ElementIconEffect : MonoBehaviour {
 				player.IceParticles(false);
 				FindObjectOfType<AudioManager>().Stop("usingMagic");
 				FindObjectOfType<AudioManager>().Play("magicStop");
+				ppEffects.deactivateChromaticAberrationWithFade();//postProcessing
             }
         }
         
