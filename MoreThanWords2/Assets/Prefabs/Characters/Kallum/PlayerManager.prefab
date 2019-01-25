@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 114494491863539426}
   - component: {fileID: 95694353901998710}
   - component: {fileID: 114955315627759120}
+  - component: {fileID: 114203090555299680}
   m_Layer: 0
   m_Name: ElementAura
   m_TagString: Untagged
@@ -732,6 +733,7 @@ GameObject:
   - component: {fileID: 114395188740600140}
   - component: {fileID: 114052278070807778}
   - component: {fileID: 114082657824626872}
+  - component: {fileID: 114455010228697158}
   m_Layer: 10
   m_Name: Kallum
   m_TagString: Player
@@ -835,6 +837,7 @@ GameObject:
   - component: {fileID: 20102862186205618}
   - component: {fileID: 81555866771545136}
   - component: {fileID: 114869432923334200}
+  - component: {fileID: 114529259251860870}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2104,7 +2107,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -2900,6 +2903,19 @@ MonoBehaviour:
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4983650916451440}
+--- !u!114 &114203090555299680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089118223677132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4343564ed9839e428bdf58d06322ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 20102862186205618}
+  ppProfile: {fileID: 11400000, guid: e333c65a5a8dbd24c9fdd9f36158a04d, type: 2}
 --- !u!114 &114240989428845558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3176,6 +3192,19 @@ MonoBehaviour:
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4339532076784922}
+--- !u!114 &114455010228697158
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1483849737879486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4343564ed9839e428bdf58d06322ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 20102862186205618}
+  ppProfile: {fileID: 11400000, guid: e333c65a5a8dbd24c9fdd9f36158a04d, type: 2}
 --- !u!114 &114463558902575768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3339,6 +3368,18 @@ MonoBehaviour:
   colliders: []
   threshold: 0.01
   isAnimated: 0
+--- !u!114 &114529259251860870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618454233930878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: e333c65a5a8dbd24c9fdd9f36158a04d, type: 2}
 --- !u!114 &114540787190906602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4074,7 +4115,7 @@ MonoBehaviour:
   animator: {fileID: 95248736558614680}
   isDeathCheck: 0
   flashLength: 0
-  parts: 0
+  parts: 22
 --- !u!114 &114944800427414204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23664,7 +23705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -48.69995, y: -49.700012}
+  m_AnchoredPosition: {x: -48.69995, y: -49.69995}
   m_SizeDelta: {x: 91.8, y: 91.79999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224453588284653636

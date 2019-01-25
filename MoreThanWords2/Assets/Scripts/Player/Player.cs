@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+	private CameraEffects ppEffects; //post processing
     [SerializeField]
     private Health health;
 
@@ -83,6 +84,7 @@ public class Player : MonoBehaviour
 
 	void Start()
 	{
+		ppEffects = GetComponent<CameraEffects>();
         iceParticles = GameObject.Find("IceParticles");
 		emberIceParticles = GameObject.Find("EmberIceParticles");
 		fireParticles = GameObject.Find("FireParticles");
@@ -146,6 +148,7 @@ public class Player : MonoBehaviour
 					FindObjectOfType<AudioManager>().Play("fireUse"); 
 					FindObjectOfType<AudioManager>().Play("usingMagic");
 					StartCoroutine(ShortAnimationPlay("UseMagic"));
+					ppEffects.activateChromaticAberration(); //postProcessing effect
 
                     if (activeMagic.ToString() == "FIRE")
                     {
@@ -161,6 +164,8 @@ public class Player : MonoBehaviour
 					FindObjectOfType<AudioManager>().Play("iceUse"); 
 					FindObjectOfType<AudioManager>().Play("usingMagic");
 					StartCoroutine(ShortAnimationPlay("UseMagic"));
+					ppEffects.activateChromaticAberration(); //postProcessing effect
+
                     if (activeMagic.ToString() == "ICE")
                     {
                         refreshMagic = true;
