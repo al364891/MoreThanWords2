@@ -8,7 +8,7 @@ public class InformationScript : MonoBehaviour {
     GameObject manager;
     ScoreManagerScript scoreManager;
     private Transition transition;
-
+    public Text storyText;
     private string nextScene;
 
     public Text totalScore;
@@ -27,7 +27,9 @@ public class InformationScript : MonoBehaviour {
         killScore.text = "Killing Points: " + scoreManager.getKillScore();
         negativeScore.text = "Fault Points: " + scoreManager.getNegativeScore();
         timeScore.text = "Time Bonus: " + scoreManager.getTimeScore();
+        storyText.text = scoreManager.getStoryText();
         nextScene = scoreManager.getNextScene();
+        
 
         Destroy(manager);
     }
