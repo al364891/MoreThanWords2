@@ -83,7 +83,7 @@ public class NPCPatrolMovement : MonoBehaviour {
         float width = platform.transform.localScale.x * platform.GetComponent<BoxCollider2D>().size.x; // Utiliza el tamaño del collider y la escala que se le aplica para averiguar la anchura de la plataforma InGame
 
         Vector3 position = this.gameObject.transform.position;
-        position.y = platform.transform.position.y + (platform.transform.localScale.y * platform.GetComponent<BoxCollider2D>().size.y) * 2 / 3;
+        position.y = platform.transform.position.y + (platform.transform.localScale.y * platform.GetComponent<BoxCollider2D>().size.y) / 2;
         this.gameObject.transform.position = position;
         //print(width);
 
