@@ -2395,6 +2395,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 4825338957934042}
   m_FacingRight: 1
   bouncing: 0
+  finished: 0
 --- !u!114 &114079253429006632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2794,6 +2795,8 @@ MonoBehaviour:
   kallumAtttackRange: 2
   animator: {fileID: 95163951023380492}
   isDeathCheck: 0
+  flashLength: 0
+  parts: 0
 --- !u!114 &114437251027468520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2908,8 +2911,6 @@ MonoBehaviour:
   controller: {fileID: 114076349181660528}
   runSpeed: 24
   horizontalMove: 0
-  playerIsCovering: 0
-  isAttacking: 0
   activeMagic: 0
   storedMagic: 1
   magicTime: 20
@@ -2918,8 +2919,6 @@ MonoBehaviour:
   elementIcon: {fileID: 0}
   keyOnMap: 3
   collectedKey: 0
-  fireParticles: {fileID: 1384524938442288}
-  iceParticles: {fileID: 1602396917129424}
   ElementFlag: 0
 --- !u!114 &114530535089793480
 MonoBehaviour:
