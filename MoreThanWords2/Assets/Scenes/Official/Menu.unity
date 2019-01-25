@@ -2176,6 +2176,16 @@ Prefab:
       propertyPath: chaptersMainMenu
       value: 
       objectReference: {fileID: 444334730}
+    - target: {fileID: 114248346957133224, guid: 359b32042a31df643bff1df328d05566,
+        type: 2}
+      propertyPath: load
+      value: 
+      objectReference: {fileID: 530698726}
+    - target: {fileID: 114248346957133224, guid: 359b32042a31df643bff1df328d05566,
+        type: 2}
+      propertyPath: chapters
+      value: 
+      objectReference: {fileID: 7461829}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 359b32042a31df643bff1df328d05566, type: 2}
   m_IsPrefabAsset: 0
@@ -3888,6 +3898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5060448eeeb9e84fb6476f4703641c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 0}
 --- !u!1 &1824792796
 GameObject:
   m_ObjectHideFlags: 0
