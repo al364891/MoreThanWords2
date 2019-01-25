@@ -82,6 +82,9 @@ public class NPCPatrolMovement : MonoBehaviour {
         float centerX = platform.GetComponent<BoxCollider2D>().bounds.center.x;
         float width = platform.transform.localScale.x * platform.GetComponent<BoxCollider2D>().size.x; // Utiliza el tamaño del collider y la escala que se le aplica para averiguar la anchura de la plataforma InGame
 
+        Vector3 position = this.gameObject.transform.position;
+        position.y = platform.transform.position.y + (platform.transform.localScale.y * platform.GetComponent<BoxCollider2D>().size.y) * 2 / 3;
+        this.gameObject.transform.position = position;
         //print(width);
 
         horizontalMove = 1;
@@ -94,6 +97,8 @@ public class NPCPatrolMovement : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
 
         cancelAttack = false;
+
+        Rb.isKinematic = true;
     }
 
     // Update is called once per frame
