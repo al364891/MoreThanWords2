@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ScoreManagerScript : MonoBehaviour {
     public string NextScene;
-    public string TextoSiguienteEscena;
     public int totalScore = 0;
     [SerializeField] private int killScore = 0;
     [SerializeField] private int negativeScore = 0;
@@ -94,10 +93,5 @@ public class ScoreManagerScript : MonoBehaviour {
     public int getNegativeScore()
     {
         return -negativeScore;
-    }
-
-    public string getStoryText()
-    {
-        return TextoSiguienteEscena;
     }
 }

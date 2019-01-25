@@ -16,8 +16,6 @@ public class InformationScript : MonoBehaviour {
     public Text negativeScore;
     public Text timeScore;
 
-    public Text storyText;
-
     private void Awake()
     {
         manager = GameObject.FindGameObjectWithTag("Manager");
@@ -29,7 +27,6 @@ public class InformationScript : MonoBehaviour {
         killScore.text = "Killing Points: " + scoreManager.getKillScore();
         negativeScore.text = "Fault Points: " + scoreManager.getNegativeScore();
         timeScore.text = "Time Bonus: " + scoreManager.getTimeScore();
-        storyText.text = scoreManager.getStoryText();
         nextScene = scoreManager.getNextScene();
 
         Destroy(manager);
