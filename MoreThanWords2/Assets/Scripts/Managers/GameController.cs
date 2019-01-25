@@ -97,7 +97,7 @@ public class GameController : MonoBehaviour
         data.resolutionX = resolutionX;
         data.resolutionY = resolutionY;*/
 
-        binaryFormatter.Serialize(file, SceneManager.GetActiveScene().buildIndex);
+        binaryFormatter.Serialize(file, SceneManager.GetActiveScene().name);
         file.Close();
     }
 
@@ -135,7 +135,8 @@ public class GameController : MonoBehaviour
 
             save = true;
 
-            SceneManager.LoadScene((int) binaryFormatter.Deserialize(file));
+            mainMenu.GetComponent<MainMenu>().transition.FadeToLevel ((string) binaryFormatter.Deserialize (file));
+            //SceneManager.LoadScene((string) binaryFormatter.Deserialize(file));
             file.Close();
             /*level = data.level;
             masterAudio = data.masterAudio;

@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Transition transition;
     /*public static MainMenu instance;
     [SerializeField] private Button load;
     [SerializeField] private Button chapters;
@@ -37,16 +38,22 @@ public class MainMenu : MonoBehaviour
     }*/
 
 
+    void Awake ()
+    {
+        transition = GameObject.Find("Transition").GetComponent<Transition> ();
+    }
+
+
     public void PlayGame()
     {
         GameController.gameController.NormalPlay();
-        SceneManager.LoadScene (1);
+        transition.FadeToLevel ("Level0");
     }
 
 
     public void ContinueGame()
     {
-        GameController.gameController.Load();
+        GameController.gameController.Load ();
     }
 
 

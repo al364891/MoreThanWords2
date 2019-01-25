@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class InformationScript : MonoBehaviour {
     GameObject manager;
     ScoreManagerScript scoreManager;
+    private Transition transition;
 
     private string nextScene;
 
@@ -20,6 +21,7 @@ public class InformationScript : MonoBehaviour {
         manager = GameObject.FindGameObjectWithTag("Manager");
         scoreManager = (ScoreManagerScript)FindObjectOfType(typeof(ScoreManagerScript));
         //Debug.Log(scoreManager);
+        transition = GameObject.Find("Transition").GetComponent<Transition>();
 
         totalScore.text = "Total Score: " + scoreManager.getTotalScore();
         killScore.text = "Killing Points: " + scoreManager.getKillScore();
@@ -32,7 +34,7 @@ public class InformationScript : MonoBehaviour {
 	
     public void NextLevel()
     {
-        SceneManager.LoadScene(nextScene);
+        transition.FadeToLevel (nextScene);
     }
 
 }

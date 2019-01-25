@@ -11,6 +11,7 @@ public class DoorControl2 : MonoBehaviour
     public string siguienteEscena;
     private Animator animator;
     private GameObject player;
+    private Transition transition;
 
 
     // Use this for initialization
@@ -18,6 +19,7 @@ public class DoorControl2 : MonoBehaviour
     {
         animator = GetComponent<Animator> ();
         player = GameObject.FindGameObjectWithTag ("Player");
+        transition = GameObject.Find("Transition").GetComponent<Transition> ();
     }
 
 
@@ -43,6 +45,7 @@ public class DoorControl2 : MonoBehaviour
     {
         DontDestroyOnLoad (GameObject.FindGameObjectWithTag ("Manager"));
         GameObject.FindGameObjectWithTag("Manager").GetComponent<ScoreManagerScript>().NextScene = siguienteEscena;
-        SceneManager.LoadScene ("ScoreScene"); //Cambiar por el siguiente nivel cuando este
+        //SceneManager.LoadScene ("ScoreScene"); //Cambiar por el siguiente nivel cuando este
+        transition.FadeToLevel ("ScoreScene");
     }
 }
