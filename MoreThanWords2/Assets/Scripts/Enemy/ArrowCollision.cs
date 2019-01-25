@@ -49,9 +49,7 @@ public class ArrowCollision : MonoBehaviour {
         else if (collision.transform.tag == "Player" && collision.transform.GetComponent<Player>().GetPlayerIsCovering()) //PLAYER IS COVERING
         {
 
-            //Debug.Log(this.gameObject.transform.rotation.eulerAngles.z);
-
-            if (((int)Mathf.Abs(collision.gameObject.transform.rotation.eulerAngles.y) == (int)180 && (this.gameObject.transform.rotation.eulerAngles.z < 90 || this.gameObject.transform.rotation.eulerAngles.z > 270)) || ((int)Mathf.Abs(collision.gameObject.transform.rotation.eulerAngles.y) == (int)0 && (this.gameObject.transform.rotation.eulerAngles.z < 270 && this.gameObject.transform.rotation.eulerAngles.z > 90)))
+            if (((int)Mathf.Abs(collision.gameObject.transform.rotation.eulerAngles.y) >= (int)178 && (this.gameObject.transform.rotation.eulerAngles.z < 90 || this.gameObject.transform.rotation.eulerAngles.z > 270)) || ((int)Mathf.Abs(collision.gameObject.transform.rotation.eulerAngles.y) == (int)0 && (this.gameObject.transform.rotation.eulerAngles.z < 270 && this.gameObject.transform.rotation.eulerAngles.z > 90)))
             {
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -0.2f);
                 this.gameObject.layer = 11;
