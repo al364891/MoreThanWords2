@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: soundTrack
-    clip: {fileID: 8300000, guid: bcffaf4ed4b6a5e4fbdb34c4da6622ac, type: 3}
+    clip: {fileID: 8300000, guid: 0cf33ba573d85bc4489211d72a6c6933, type: 3}
     volume: 0.3
     pitch: 1
     loop: 1

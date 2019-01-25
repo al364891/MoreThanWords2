@@ -141,7 +141,6 @@ GameObject:
   - component: {fileID: 114494491863539426}
   - component: {fileID: 95694353901998710}
   - component: {fileID: 114955315627759120}
-  - component: {fileID: 114143195308852092}
   m_Layer: 0
   m_Name: ElementAura
   m_TagString: Untagged
@@ -733,7 +732,6 @@ GameObject:
   - component: {fileID: 114395188740600140}
   - component: {fileID: 114052278070807778}
   - component: {fileID: 114082657824626872}
-  - component: {fileID: 114843651160433450}
   m_Layer: 10
   m_Name: Kallum
   m_TagString: Player
@@ -837,7 +835,6 @@ GameObject:
   - component: {fileID: 20102862186205618}
   - component: {fileID: 81555866771545136}
   - component: {fileID: 114869432923334200}
-  - component: {fileID: 114422399125078370}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1377,7 +1374,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1618454233930878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.5, y: 18.1, z: 0}
+  m_LocalPosition: {x: -102.4, y: 65.6, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 4802810713331054}
@@ -1723,7 +1720,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1483849737879486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -96.9, y: 68.8, z: 0}
+  m_LocalPosition: {x: -100.1, y: 65, z: 0}
   m_LocalScale: {x: 1.0805331, y: 1.0940399, z: 1.0803645}
   m_Children:
   - {fileID: 4264431161828828}
@@ -1913,7 +1910,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047257718900232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.028013, y: -15.968705, z: 0}
+  m_LocalPosition: {x: 19.97, y: -23.46, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 4611891431867520}
@@ -2544,7 +2541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.99999964
+  m_Length: 1.0000027
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4723569543798208}
   m_AttachedIK: {fileID: 0}
@@ -2593,7 +2590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 0.9528302, g: 0, b: 0, a: 1}
-  m_Length: 0.15999949
+  m_Length: 0.15999946
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4951874963412136}
   m_AttachedIK: {fileID: 0}
@@ -2746,19 +2743,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 52ec1e35aef68bd4b9fe2ed2e8d8e705, type: 2}
   - {fileID: 11400000, guid: 43e826c02fc4c75428be6f6cee75e107, type: 2}
   - {fileID: 11400000, guid: 4db1788a67bac64428adba217d72df06, type: 2}
---- !u!114 &114143195308852092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1089118223677132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e06ff8de2eb264d9bd0dffacb47cf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 20102862186205618}
-  ppProfile: {fileID: 11400000, guid: e333c65a5a8dbd24c9fdd9f36158a04d, type: 2}
 --- !u!114 &114145224478632752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2873,7 +2857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.3365453
+  m_Length: 0.3365376
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4746092872181264}
   m_AttachedIK: {fileID: 0}
@@ -2948,7 +2932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.36076427
+  m_Length: 0.36076808
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4336980580786700}
   m_AttachedIK: {fileID: 0}
@@ -3152,18 +3136,6 @@ MonoBehaviour:
   colliders: []
   threshold: 0.01
   isAnimated: 0
---- !u!114 &114422399125078370
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1618454233930878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: e333c65a5a8dbd24c9fdd9f36158a04d, type: 2}
 --- !u!114 &114435383865725428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3395,7 +3367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.36000302
+  m_Length: 0.35999942
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4377005079000872}
   m_AttachedIK: {fileID: 0}
@@ -3411,7 +3383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.35999954
+  m_Length: 0.36000216
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4248900228752618}
   m_AttachedIK: {fileID: 0}
@@ -3670,7 +3642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.66714895
+  m_Length: 0.66715103
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4339532076784922}
   m_AttachedIK: {fileID: 0}
@@ -3881,23 +3853,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.28171647
+  m_Length: 0.28171033
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4054871780608638}
   m_AttachedIK: {fileID: 0}
---- !u!114 &114843651160433450
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1483849737879486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e06ff8de2eb264d9bd0dffacb47cf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 20102862186205618}
-  ppProfile: {fileID: 11400000, guid: e333c65a5a8dbd24c9fdd9f36158a04d, type: 2}
 --- !u!114 &114844103377861636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3946,7 +3905,7 @@ MonoBehaviour:
   FollowSpeed: 2
   limitH: 4
   limitV: 3
-  limiteInferior: -30
+  limiteInferior: -53
   Target: {fileID: 4611891431867520}
 --- !u!114 &114876126158958132
 MonoBehaviour:
@@ -3960,7 +3919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.36077034
+  m_Length: 0.36076692
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4727572480877972}
   m_AttachedIK: {fileID: 0}
@@ -4092,7 +4051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.8700029
+  m_Length: 0.8700019
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4983650916451440}
   m_AttachedIK: {fileID: 0}
@@ -23483,7 +23442,7 @@ SpriteRenderer:
   m_Size: {x: 5.14, y: 5.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!222 &222081534760715248
