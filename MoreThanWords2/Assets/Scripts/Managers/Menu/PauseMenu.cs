@@ -9,7 +9,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public static bool paused = false;
-    [SerializeField] private GameObject pauseMenu, mainPauseMenu, optionsPauseMenu;
+    [SerializeField] private GameObject pauseBackground, pauseMenu, mainPauseMenu, optionsPauseMenu;
     private GameController gameController;
     private Transition transition;
 
@@ -19,6 +19,7 @@ public class PauseMenu : MonoBehaviour
         transition = GameObject.Find("Transition").GetComponent<Transition>();
         gameController = GameObject.Find("GameController").GetComponent<GameController> ();
 
+        pauseBackground.SetActive (false);
         pauseMenu.SetActive (false);
         mainPauseMenu.SetActive (false);
         optionsPauseMenu.SetActive (false);
@@ -44,6 +45,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume ()
     {
+        pauseBackground.SetActive (false);
         pauseMenu.SetActive (false);
         mainPauseMenu.SetActive (false);
         optionsPauseMenu.SetActive (false);
@@ -54,6 +56,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Pause ()
     {
+        pauseBackground.SetActive (true);
         pauseMenu.SetActive (true);
         mainPauseMenu.SetActive (true);
         optionsPauseMenu.SetActive (false);
@@ -79,7 +82,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame ()
     {
-        Debug.Log ("Quit");
+        print ("Quit");
         Application.Quit ();
     }
 }

@@ -3597,7 +3597,7 @@ Prefab:
     - target: {fileID: 224412953119759568, guid: f3031d57349b4e74eb8cf11eb93eaa71,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -173
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 224741308452907586, guid: f3031d57349b4e74eb8cf11eb93eaa71,
         type: 2}
@@ -3774,6 +3774,14 @@ Prefab:
         type: 2}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196789827056088, guid: f3031d57349b4e74eb8cf11eb93eaa71, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160619301646890, guid: f3031d57349b4e74eb8cf11eb93eaa71, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114891463348206928, guid: f3031d57349b4e74eb8cf11eb93eaa71, type: 2}

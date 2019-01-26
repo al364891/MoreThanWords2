@@ -184,6 +184,8 @@ public class GameController : MonoBehaviour
             load.interactable = false;
             //chapters = GameObject.Find("ChaptersBut").GetComponent<Button>();
             chapters.interactable = false;
+
+            print ("Deleted");
         }
     }
 
