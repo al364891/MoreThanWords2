@@ -28,6 +28,7 @@ public class ArrowForce : MonoBehaviour {
         launched = false;
         rb = this.GetComponent<Rigidbody2D>();
         rb.isKinematic = true;
+        this.gameObject.layer = 11;
         //LaunchArrow();
     }
 
@@ -61,6 +62,7 @@ public class ArrowForce : MonoBehaviour {
 
     void LaunchArrow()
     {
+        this.gameObject.layer = 12;
         launched = true;
         rb.isKinematic = false;
         rb.velocity = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle) * force, Mathf.Sin(Mathf.Deg2Rad * angle) * force, 0);
