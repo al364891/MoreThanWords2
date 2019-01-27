@@ -6,7 +6,8 @@ public class PickUpKey : MonoBehaviour {
 	private KeyManager keyManager;
 	private bool keyCollide = false;
 	public Player player;
-
+	public Health health;
+	[SerializeField] private int healthRestored;
 	private GameObject door;
 	private Animator anim;
 	// Use this for initialization
@@ -23,6 +24,14 @@ public class PickUpKey : MonoBehaviour {
 			player.collectedKey += 1;
 			FindObjectOfType<AudioManager>().Play("keyPickUp");//pickUpKeySound
 			keyManager.SubstractKey ();
+			if (health.CurrentValue <= health.getMax() - healthRestored)
+			{
+				health.CurrentValue += healthRestored;
+			}
+			else
+			{
+				health.CurrentValue = health.getMax();
+			}
 		}
 		keyCollide = false;
 	}

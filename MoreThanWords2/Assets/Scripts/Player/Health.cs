@@ -14,7 +14,7 @@ public class Health : MonoBehaviour {
     private float lerptime = 1.0f;
 
     /*Maxpossible Health and getter/setter*/
-    [SerializeField]
+	[SerializeField]
     private int MaxValue { get; set; }
 
     /*Current Healt and getter/setter*/
@@ -64,4 +64,6 @@ public class Health : MonoBehaviour {
         MaxValue = maxValue;
         CurrentValue = currentValue;
     }
+
+	public int getMax() {return MaxValue;}
 }
