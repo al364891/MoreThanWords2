@@ -10,6 +10,8 @@ public class NPCArcherAttack : Attacker {
     float angulo;
     float addX = 0.4f;
 
+    bool destroyed = false;
+
     public override void Attack(float x, float y, float direction)
     {
         this.x = x; // X del arquero
@@ -59,6 +61,15 @@ public class NPCArcherAttack : Attacker {
         else
         {
             newArrow.GetComponent<ArrowForce>().SetAngle(angulo - 25);
+        }
+    }
+
+    public void DestroyNewArrow()
+    {
+        if (!destroyed)
+        {
+            destroyed = true;
+            Destroy(newArrow);
         }
     }
 }

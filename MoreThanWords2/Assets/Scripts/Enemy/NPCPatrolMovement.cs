@@ -118,6 +118,12 @@ public class NPCPatrolMovement : MonoBehaviour {
         }
         else
         {
+            //DESTRUIR FLECHA DEL ARQUERO EN CASO DE MUERTE
+            if (this.GetComponent<NPCArcherAttack>() != null)
+            {
+                this.GetComponent<NPCArcherAttack>().DestroyNewArrow();
+            }
+
             animator.SetFloat("Speed", 0);
             death_lenght -= Time.deltaTime;
             if (death_lenght < 0)
