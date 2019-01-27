@@ -7,6 +7,7 @@ public class Transition : MonoBehaviour
     public static Transition instance;
     [SerializeField] private Animator animator;
     private string level;
+    [SerializeField] private GameController controller;
 
 
    void Awake ()
@@ -21,7 +22,6 @@ public class Transition : MonoBehaviour
 
             return;
         }
-
         DontDestroyOnLoad (gameObject);
     }
 
@@ -45,6 +45,11 @@ public class Transition : MonoBehaviour
 
     public void OnFadeComplete ()
     {
+        if (level == "Menu")
+        {
+            controller.findObjects = true;
+        }
+
         SceneManager.LoadScene (level);
     }
 }

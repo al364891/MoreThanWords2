@@ -10,14 +10,12 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool paused = false;
     [SerializeField] private GameObject pauseBackground, pauseMenu, mainPauseMenu, optionsPauseMenu;
-    private GameController gameController;
     private Transition transition;
 
 
     void Awake ()
     {
         transition = GameObject.Find("Transition").GetComponent<Transition>();
-        gameController = GameObject.Find("GameController").GetComponent<GameController> ();
 
         pauseBackground.SetActive (false);
         pauseMenu.SetActive (false);
@@ -76,7 +74,6 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         transition.FadeToLevel ("Menu");
-        gameController.findObjects = true;
     }
 
 
