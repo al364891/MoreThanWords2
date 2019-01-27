@@ -67,6 +67,10 @@ public class Player : MonoBehaviour
 
 	private float previousVelocity;
 
+    //private Transition transition;
+    private PauseMenu menu;
+    private bool restarted;
+
 	/*
 	[Header("Events")]
 	[Space]
@@ -89,12 +93,15 @@ public class Player : MonoBehaviour
 		emberIceParticles = GameObject.Find("EmberIceParticles");
 		fireParticles = GameObject.Find("FireParticles");
 		emberFireParticles = GameObject.Find("EmberFireParticles");
+        menu = GameObject.Find("PauseMenuCan").GetComponent<PauseMenu> ();
 
 		animator = GetComponent<Animator>();
 		AttackCalc = GetComponent<AttackCalculate>();
 
         health.setHealth(startHealth, startHealth);
 		Rb = GetComponent<Rigidbody2D>();
+
+        restarted = false;
 
 		IceParticles(false);
 		FireParticles(false);
@@ -280,8 +287,13 @@ public class Player : MonoBehaviour
 
     private IEnumerator Respawn ()
     {
-        yield return new WaitForSeconds (4.5f);
-        SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
+        yield return new WaitForSeconds (3.5f);
+
+        if (restarted == false)
+        {
+            menu.RestartLevel ();
+            restarted = true;
+        }
     }
 
 	private IEnumerator DisablePowerUp(GameObject powerUp){

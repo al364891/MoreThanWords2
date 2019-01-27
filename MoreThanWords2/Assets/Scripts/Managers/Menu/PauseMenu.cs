@@ -66,6 +66,7 @@ public class PauseMenu : MonoBehaviour
     public void RestartLevel ()
     {
         Time.timeScale = 1f;
+        //print ("There we go.");
         transition.FadeToLevel (SceneManager.GetActiveScene().name);
     }
 
