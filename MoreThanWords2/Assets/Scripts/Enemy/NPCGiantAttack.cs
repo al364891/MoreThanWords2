@@ -28,7 +28,7 @@ public class NPCGiantAttack : Attacker
     public override void Attack (float x, float y, float direction)
     {
         this.x = x;
-        this.y = y;
+        this.y = y + this.gameObject.GetComponent<CircleCollider2D>().radius;
 
         Invoke ("CalculateImpact", 0.8f);
 		FindObjectOfType<AudioManager>().PlaySoundWithRandomPitch(4); //giantSound
@@ -37,6 +37,7 @@ public class NPCGiantAttack : Attacker
 
     public void CalculateImpact ()
     {
+        Debug.Log(x + " " + y);
         if (Vector2.Distance(new Vector2(x, y), new Vector2(player.transform.position.x, player.transform.position.y)) <= 3 && ((controller.m_FacingRight && player.transform.position.x >= x) || !controller.m_FacingRight && player.transform.position.x <= x))
         {
             //Debug.Log("get Hit");

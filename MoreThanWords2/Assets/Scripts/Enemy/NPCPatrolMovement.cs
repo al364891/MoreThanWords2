@@ -195,6 +195,13 @@ public class NPCPatrolMovement : MonoBehaviour {
                         attacking = true;
                         animator.SetBool("Attack", attacking && timer > attack_cooldown - attack_lenght && !cancelAttack);
                     }
+                    else if (this.gameObject.GetComponent<NPCGiantAttack>() != null && !attacking && Mathf.Abs(Vector3.Distance(this.transform.position + new Vector3(0,this.GetComponent<CircleCollider2D>().radius,0), player.transform.position)) < attackRange)
+                    {
+                        attacker.Attack(transform.position.x, transform.position.y, transform.rotation.y);
+                        //Debug.Log(transform.rotation);
+                        attacking = true;
+                        animator.SetBool("Attack", attacking && timer > attack_cooldown - attack_lenght && !cancelAttack);
+                    }
                 }
             }
         }
