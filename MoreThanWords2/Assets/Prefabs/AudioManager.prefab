@@ -208,3 +208,4 @@ MonoBehaviour:
     pitch: 0.88
     loop: 0
     source: {fileID: 0}
+  audioMixerMaster: {fileID: 24300002, guid: 81f78da5f04a8234ca84df765fafc218, type: 2}

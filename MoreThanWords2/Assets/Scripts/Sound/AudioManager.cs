@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour {
 
 	public Sound[] sounds;
 
+	public AudioMixerGroup audioMixerMaster;
+
 	public static AudioManager instance;
 
 	// Use this for initialization
@@ -28,7 +30,8 @@ public class AudioManager : MonoBehaviour {
 			s.source.clip = s.clip;
 			s.source.volume = s.volume;
 			s.source.pitch = s.pitch;
-			s.source.loop = s.loop;		
+			s.source.loop = s.loop;	
+			s.source.outputAudioMixerGroup = audioMixerMaster; //to control volume
 		}
 			
 		Play ("soundTrack"); 
