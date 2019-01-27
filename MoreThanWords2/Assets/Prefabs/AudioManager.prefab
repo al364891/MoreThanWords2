@@ -156,13 +156,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: punchNormal
     clip: {fileID: 8300000, guid: 628ff454f9b351a468a311ed4860238d, type: 3}
-    volume: 0.581
+    volume: 0.63
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: auch
     clip: {fileID: 8300000, guid: 99a3eef7c96170a48b3ec4edeaa9fe4f, type: 3}
-    volume: 0.187
+    volume: 0.272
     pitch: 1.33
     loop: 0
     source: {fileID: 0}
@@ -198,7 +198,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: wizard
     clip: {fileID: 8300000, guid: c5e093a3e8abb68428706932488569d5, type: 3}
-    volume: 0.448
+    volume: 0.291
     pitch: 1
     loop: 0
     source: {fileID: 0}

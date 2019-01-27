@@ -38,7 +38,7 @@ public class NPCGiantAttack : Attacker
     public void CalculateImpact ()
     {
         Debug.Log(x + " " + y);
-        if (Vector2.Distance(new Vector2(x, y), new Vector2(player.transform.position.x, player.transform.position.y)) <= 3 && ((controller.m_FacingRight && player.transform.position.x >= x) || !controller.m_FacingRight && player.transform.position.x <= x))
+        if (Vector2.Distance(new Vector2(x, y), new Vector2(player.transform.position.x, player.transform.position.y)) <= 4.5 && ((controller.m_FacingRight && player.transform.position.x >= x) || !controller.m_FacingRight && player.transform.position.x <= x))
         {
             //Debug.Log("get Hit");
             if (controller.m_FacingRight) //direction of the ray

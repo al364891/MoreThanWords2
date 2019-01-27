@@ -27,7 +27,7 @@ public class KeyManager : MonoBehaviour {
 	}
 
 	public void CompleteLevel() {
-		FindObjectOfType<AudioManager>().ReduceMusicVolume(5.2f);
+		FindObjectOfType<AudioManager>().ReduceMusicVolume(6f);
 		FindObjectOfType<AudioManager>().Play("keysCollected");
 		levelCompleted = true;
 	}
