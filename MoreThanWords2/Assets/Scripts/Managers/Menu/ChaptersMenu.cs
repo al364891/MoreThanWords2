@@ -35,7 +35,13 @@ public class ChaptersMenu : MonoBehaviour
             case ("Level3"):
                 available = 4;
                 break;
+            case ("Level4"):
+                available = 5;
+                break;
         }
+
+        // QUITAR EN LA VERSION FINAL
+        available = 5;
 
         for (int i = 0; i < chapters.Length; i += 1)
         {
