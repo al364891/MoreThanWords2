@@ -1901,7 +1901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
-  points: 10
+  points: 40
   enemyMagic: 0
   player: {fileID: 0}
   flashLength: 0
