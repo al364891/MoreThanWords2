@@ -59,13 +59,13 @@ public class ScoreManagerScript : MonoBehaviour {
     private void CalculateTimeScore()
         //POR DETERMINAR LO QUE QUEREMOS DAR AUN - BASE SIMPLE
     {
-        if (timer > 120)
+        if (timer > 240)
         {
             timeScore = 0;
         }
         else
         {
-            timeScore = (int)(120 - timer)*2;
+            timeScore = (int)(240 - timer)*2;
         }
     }
 
