@@ -52,6 +52,7 @@ public class NPCBrujoAttack : Attacker {
 		if (direction == 1) {
 			newMagic.transform.Rotate(0, 180, 0);
 		}
+		FindObjectOfType<AudioManager>().Play("wizard");
 	}
 
 	public void DestroyMagic()

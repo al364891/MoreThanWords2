@@ -148,10 +148,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: bigPunch
-    clip: {fileID: 8300000, guid: d7c1d9c7eedbb814087aa2cff8866319, type: 3}
-    volume: 0.804
-    pitch: 1
+  - name: giant
+    clip: {fileID: 8300000, guid: 25d5722b10ee7af49ad7cf89f0b81494, type: 3}
+    volume: 0.235
+    pitch: 1.09
     loop: 0
     source: {fileID: 0}
   - name: punchNormal
@@ -174,7 +174,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: bowShoot
     clip: {fileID: 8300000, guid: 8fd79f000b07d9442b970ae276490f75, type: 3}
-    volume: 0.641
+    volume: 0.244
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -186,7 +186,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: italic
     clip: {fileID: 8300000, guid: f05bdadcc67a4fc448330c035a30f8de, type: 3}
-    volume: 0.574
+    volume: 0.984
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: arrowShield
+    clip: {fileID: 8300000, guid: 67dcd47b1938cb644b07f8debc4faf63, type: 3}
+    volume: 0.331
+    pitch: 1.3
+    loop: 0
+    source: {fileID: 0}
+  - name: wizard
+    clip: {fileID: 8300000, guid: c5e093a3e8abb68428706932488569d5, type: 3}
+    volume: 0.448
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: lastImpact
+    clip: {fileID: 8300000, guid: d6d1f66a62db14744a994749cbaec1db, type: 3}
+    volume: 1
+    pitch: 0.88
     loop: 0
     source: {fileID: 0}

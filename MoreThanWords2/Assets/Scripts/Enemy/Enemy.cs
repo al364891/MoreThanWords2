@@ -72,6 +72,7 @@ public class Enemy : MonoBehaviour {
                 pointManager.GetComponent<ScoreManagerScript>().AddKillPoints(points);
                 this.GetComponent<NPCPatrolMovement>().Death();
                 //print(damage + " damage taken!");
+				FindObjectOfType<AudioManager>().Play("lastImpact");
             }
             else
             {

@@ -31,6 +31,7 @@ public class NPCGiantAttack : Attacker
         this.y = y;
 
         Invoke ("CalculateImpact", 0.8f);
+		FindObjectOfType<AudioManager>().PlaySoundWithRandomPitch(4); //giantSound
     }
 
 

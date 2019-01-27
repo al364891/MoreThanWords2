@@ -119,6 +119,13 @@ public class AudioManager : MonoBehaviour {
 			attack3.source.pitch = rdmPitch;
 			Play("jump");
 		}
+		else if (index == 4) //giant
+		{
+			float rdmPitch = UnityEngine.Random.Range(1f, 1.3f); //pitch range
+			Sound attack3 = Array.Find(sounds, sound => sound.name == "giant");
+			attack3.source.pitch = rdmPitch;
+			Play("giant");
+		}
 	}
 
 

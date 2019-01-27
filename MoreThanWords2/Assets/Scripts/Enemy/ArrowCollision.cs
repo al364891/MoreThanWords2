@@ -53,6 +53,7 @@ public class ArrowCollision : MonoBehaviour {
             {
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -0.2f);
                 this.gameObject.layer = 11;
+				FindObjectOfType<AudioManager>().Play("arrowShield");
             }
             else
             {
