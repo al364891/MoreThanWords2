@@ -2351,7 +2351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3679245, g: 0.2937322, b: 0.16487183, a: 1}
+  m_Color: {r: 0.7169812, g: 0.49463344, b: 0.10484158, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2371,7 +2371,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'D / Right - Move right
+  m_Text: 'Keyboard/Xbox One Controller
+
+    D / Right - Move right
 
     A / Left - Move left
 
@@ -2387,7 +2389,10 @@ MonoBehaviour:
 
 
     Tip: you can use magic elements to gain an advantage against enemies kindred to
-    the opposite element.'
+    the opposite element. Below the health bar, the HUD will show your actual stored
+    magic type.
+
+'
 --- !u!222 &1425519564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3242,7 +3247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7169812, g: 0.49463344, b: 0.10484158, a: 1}
+  m_Color: {r: 0.38679248, g: 0.2871122, b: 0.13683696, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3287,7 +3292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7169812, g: 0.49463344, b: 0.10484158, a: 1}
+  m_Color: {r: 0.38679248, g: 0.2871122, b: 0.13683696, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
