@@ -124,6 +124,11 @@ public class NPCPatrolMovement : MonoBehaviour {
                 this.GetComponent<NPCArcherAttack>().DestroyNewArrow();
             }
 
+			if (this.GetComponent<NPCBrujoAttack>() != null)
+			{
+				this.GetComponent<NPCBrujoAttack>().DestroyMagic();
+			}
+
             animator.SetFloat("Speed", 0);
             death_lenght -= Time.deltaTime;
             if (death_lenght < 0)

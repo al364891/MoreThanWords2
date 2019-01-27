@@ -9,6 +9,8 @@ public class NPCBrujoAttack : Attacker {
 	private Enemy enemyScript;
 	private GameObject newMagic;
 
+	bool destroyed = false;
+
 	private Enemy.enemyType eType;
 
 	float x, y, direction;
@@ -51,4 +53,14 @@ public class NPCBrujoAttack : Attacker {
 			newMagic.transform.Rotate(0, 180, 0);
 		}
 	}
+
+	public void DestroyMagic()
+	{
+		if (!destroyed)
+		{
+			destroyed = true;
+			Destroy(newMagic);
+		}
+	}
+
 }
