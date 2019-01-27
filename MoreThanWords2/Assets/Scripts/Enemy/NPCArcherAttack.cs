@@ -45,6 +45,7 @@ public class NPCArcherAttack : Attacker {
         }
 
         Invoke("SpawnArrow", 0.5f); // Añade delay al metodo
+		FindObjectOfType<AudioManager>().Play("bowLoad");
     }
 
     private void SpawnArrow()

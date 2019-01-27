@@ -31,6 +31,7 @@ public class BounceOff : MonoBehaviour
         if (collision.gameObject == player && (playerCollider.transform.position.y - playerCollider.bounds.size.y) > (platformCollider.transform.position.y + platformCollider.bounds.size.y / 2))
         {
             playerController.Bounce(verticalForce);
+			FindObjectOfType<AudioManager>().Play("italic");
         }
     }
 }

@@ -112,6 +112,13 @@ public class AudioManager : MonoBehaviour {
 			attack3.source.pitch = rdmPitch;
 			Play("swordParry");
 		}
+		else if (index == 3) //jump
+		{
+			float rdmPitch = UnityEngine.Random.Range(1.15f, 1.30f); //pitch range
+			Sound attack3 = Array.Find(sounds, sound => sound.name == "jump");
+			attack3.source.pitch = rdmPitch;
+			Play("jump");
+		}
 	}
 
 

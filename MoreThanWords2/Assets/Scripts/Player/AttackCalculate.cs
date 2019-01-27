@@ -157,21 +157,19 @@ public class AttackCalculate : MonoBehaviour {
 		}
 
 
-		//Test health
+		//Test 
 
 		if (Input.GetKeyDown(KeyCode.O))
 		{
-			health.CurrentValue -= 20;
+
 		}
 		if (Input.GetKeyDown(KeyCode.P))
 		{
-			health.CurrentValue += 20;
+			
 		}
-
-		//Test audio
 		if (Input.GetKeyDown(KeyCode.T))
 		{
-			FindObjectOfType<AudioManager>().ReduceMusicVolume(3f);
+			
 		}
 		hitParry = false;
 	}
@@ -278,6 +276,10 @@ public class AttackCalculate : MonoBehaviour {
 
         flash = true;
         flashCounter = flashLength;
+
+		FindObjectOfType<AudioManager>().Play("punchNormal");
+		FindObjectOfType<AudioManager>().Play("auch");
+
 	}
 
 	void SetDeathState()

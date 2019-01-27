@@ -66,6 +66,7 @@ public class ArrowForce : MonoBehaviour {
         launched = true;
         rb.isKinematic = false;
         rb.velocity = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle) * force, Mathf.Sin(Mathf.Deg2Rad * angle) * force, 0);
+		FindObjectOfType<AudioManager>().Play("bowShoot");
     }
 
     void UpdateAngle()

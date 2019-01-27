@@ -125,7 +125,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: keysCollected
-    clip: {fileID: 8300000, guid: bad23329e5ec8ca439989fc9c071dff2, type: 3}
+    clip: {fileID: 8300000, guid: ab8dba39472fd9e48b46f7409728e3e9, type: 3}
     volume: 0.85
     pitch: 1
     loop: 0
@@ -139,6 +139,54 @@ MonoBehaviour:
   - name: swordParry
     clip: {fileID: 8300000, guid: ddbe76c3b770b46438a0065a2e0031ce, type: 3}
     volume: 0.804
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: jump
+    clip: {fileID: 8300000, guid: 7e27629201ed7904599d115734b1b047, type: 3}
+    volume: 0.429
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bigPunch
+    clip: {fileID: 8300000, guid: d7c1d9c7eedbb814087aa2cff8866319, type: 3}
+    volume: 0.804
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: punchNormal
+    clip: {fileID: 8300000, guid: 628ff454f9b351a468a311ed4860238d, type: 3}
+    volume: 0.581
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: auch
+    clip: {fileID: 8300000, guid: 99a3eef7c96170a48b3ec4edeaa9fe4f, type: 3}
+    volume: 0.187
+    pitch: 1.33
+    loop: 0
+    source: {fileID: 0}
+  - name: bowLoad
+    clip: {fileID: 8300000, guid: 8873e19c7921b9040ada751703eb7802, type: 3}
+    volume: 0.527
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bowShoot
+    clip: {fileID: 8300000, guid: 8fd79f000b07d9442b970ae276490f75, type: 3}
+    volume: 0.641
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: menuImpact
+    clip: {fileID: 8300000, guid: 283e12dd0b312a143ab42327ddced7bb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: italic
+    clip: {fileID: 8300000, guid: f05bdadcc67a4fc448330c035a30f8de, type: 3}
+    volume: 0.574
     pitch: 1
     loop: 0
     source: {fileID: 0}
