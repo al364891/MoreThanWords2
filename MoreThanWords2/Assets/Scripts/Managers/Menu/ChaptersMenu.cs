@@ -19,7 +19,7 @@ public class ChaptersMenu : MonoBehaviour
 
     void Start ()
     {
-        chapters = new Button[4];
+        chapters = new Button[5];
         
         switch (GameController.gameController.CheckLastUnlocked ())
         {
