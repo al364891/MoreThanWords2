@@ -16,11 +16,14 @@ EditorBuildSettings:
     guid: a92f7380cf2fd744f879f6ea6af9f8d0
   - enabled: 1
     path: Assets/Scenes/Official/Level2.unity
-    guid: 84f198229cfaf4041bb4b1e9d5c5d96e
+    guid: 5870d032e61884c4e98404a7707918a4
   - enabled: 1
     path: Assets/Scenes/Official/Level3.unity
-    guid: 9ef9f2073120e0f41be790cdb7df156b
+    guid: 84f198229cfaf4041bb4b1e9d5c5d96e
   - enabled: 1
     path: Assets/Scenes/Official/Level4.unity
     guid: 22db136cc00470b48b823ebdb435e4d2
+  - enabled: 1
+    path: Assets/Scenes/Official/ScoreScene.unity
+    guid: 9068eb2c2cffc454ca9969567305e59e
   m_configObjects: {}
