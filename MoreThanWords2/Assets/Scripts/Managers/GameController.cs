@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     //private string settingsLocation;
     [HideInInspector] public bool save;
     public bool findObjects;
+    public Color gray;
     //[HideInInspector] public bool noSettings;
 
     /*public float masterAudio;
@@ -35,6 +36,7 @@ public class GameController : MonoBehaviour
         saveLocation = Application.persistentDataPath + "/Level.dat";
         //settingsLocation = Application.persistentDataPath + "Settings.dat";
         save = true;
+        gray = new Vector4 (0.5f, 0.5f, 0.5f, 1);
         FindObjects ();
 
         if (gameController == null)
@@ -50,7 +52,9 @@ public class GameController : MonoBehaviour
         if (File.Exists (saveLocation) == false)
         {
             load.interactable = false;
+            load.transform.GetChild(0).GetComponent<Text>().color = gray;
             chapters.interactable = false;
+            chapters.transform.GetChild(0).GetComponent<Text>().color = gray;
             //noSettings = true;
         }
         /*else
@@ -68,6 +72,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        // COMENTAR AL FINAL
         if (Input.GetKeyDown (KeyCode.X) == true)
         {
             Delete ();
@@ -82,7 +87,7 @@ public class GameController : MonoBehaviour
 
     private void FindObjects ()
     {
-        canvas = GameObject.Find("Canvas").GetComponent<GetChildren>();
+        canvas = GameObject.Find("Canvas").GetComponent<GetChildren> ();
         mainMenu = canvas.mainMenu;
         chaptersMainMenu = canvas.chaptersMainMenu;
         optionsMainMenu = canvas.optionsMainMenu;
@@ -180,10 +185,10 @@ public class GameController : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Menu" && File.Exists (saveLocation) == true)
         {
             File.Delete(saveLocation);
-            //load = GameObject.Find("ContinueBut").GetComponent<Button>();
             load.interactable = false;
-            //chapters = GameObject.Find("ChaptersBut").GetComponent<Button>();
+            load.transform.GetChild(0).GetComponent<Text>().color = gray;
             chapters.interactable = false;
+            chapters.transform.GetChild(0).GetComponent<Text>().color = gray;
 
             print ("Deleted");
         }

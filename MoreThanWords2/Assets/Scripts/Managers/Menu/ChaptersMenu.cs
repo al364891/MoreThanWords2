@@ -20,8 +20,11 @@ public class ChaptersMenu : MonoBehaviour
     void Start ()
     {
         chapters = new Button[5];
-        
-        switch (GameController.gameController.CheckLastUnlocked ())
+
+        string levelName = GameController.gameController.CheckLastUnlocked ();
+        available = (int) levelName[levelName.Length - 1] - 48;
+        print (available);
+        /*switch (GameController.gameController.CheckLastUnlocked ())
         {
             case ("Level0"):
                 available = 1;
@@ -38,10 +41,10 @@ public class ChaptersMenu : MonoBehaviour
             case ("Level4"):
                 available = 5;
                 break;
-        }
+        }*/
 
         // QUITAR EN LA VERSION FINAL
-        available = 5;
+        //available = 5;
 
         for (int i = 0; i < chapters.Length; i += 1)
         {
@@ -49,6 +52,7 @@ public class ChaptersMenu : MonoBehaviour
             if (i >= available)
             {
                 chapters[i].interactable = false;
+                chapters[i].transform.GetChild(0).GetComponent<Text>().color = GameController.gameController.gray;
                 //print("Not accessible");
             }
         }
