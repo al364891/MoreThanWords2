@@ -1849,6 +1849,8 @@ MonoBehaviour:
     themselves worthy: Finding keys and facing other brave soldiers in order to progress.  '
   - 'The first challenge proved to be fairly easy to our hero, but many more were
     waiting for him ahead... '
+  next: {fileID: 826987761}
+  prev: {fileID: 1617558050}
   maxIndex: 0
   transition: 0.5
   canvas: {fileID: 819002717}

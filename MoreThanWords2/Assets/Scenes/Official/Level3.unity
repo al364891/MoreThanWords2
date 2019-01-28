@@ -2802,7 +2802,7 @@ Prefab:
     - target: {fileID: 114031357550246874, guid: 3d7f84eff3e2a1f44b9245e625edd1fd,
         type: 2}
       propertyPath: siguienteEscena
-      value: Level3
+      value: Level4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d7f84eff3e2a1f44b9245e625edd1fd, type: 2}

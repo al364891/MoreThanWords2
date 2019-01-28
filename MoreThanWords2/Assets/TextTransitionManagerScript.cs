@@ -11,6 +11,9 @@ public class TextTransitionManagerScript : MonoBehaviour {
 
     public List<string> text;
 
+    public Button next;
+    public Button prev;
+
     [SerializeField] private int maxIndex = 0;
 
     private bool inTransition = false;
@@ -75,6 +78,7 @@ public class TextTransitionManagerScript : MonoBehaviour {
         text = i;
         maxIndex = i.Count-1;
         storyTextBox.text = text[0];
+        UpdateButtons();
     }
 
     public void Next()
@@ -84,6 +88,7 @@ public class TextTransitionManagerScript : MonoBehaviour {
             index++;
             inTransition = true;
         }
+        UpdateButtons();
     }
 
     public void Previous()
@@ -92,6 +97,31 @@ public class TextTransitionManagerScript : MonoBehaviour {
         {
             index--;
             inTransition = true;
+        }
+        UpdateButtons();
+    }
+
+    public void UpdateButtons()
+    {
+        if (index == maxIndex)
+        {
+            next.image.enabled = false;
+            next.GetComponentInChildren<Text>().text = "";
+        }
+        else if (index == maxIndex -1)
+        {
+            next.image.enabled = true;
+            next.GetComponentInChildren<Text>().text = "Next";
+        }
+        if (index == 0)
+        {
+            prev.image.enabled = false;
+            prev.GetComponentInChildren<Text>().text = "";
+        }
+        else if (index == 1)
+        {
+            prev.image.enabled = true;
+            prev.GetComponentInChildren<Text>().text = "Prev";
         }
     }
 }
