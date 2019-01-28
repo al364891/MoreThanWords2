@@ -11,6 +11,8 @@ public class InformationScript : MonoBehaviour {
     public Text storyText;
     private string nextScene;
 
+    private List<string> text;
+
     public Text totalScore;
     public Text killScore;
     public Text negativeScore;
@@ -27,7 +29,7 @@ public class InformationScript : MonoBehaviour {
         killScore.text = "Killing Points: " + scoreManager.getKillScore();
         negativeScore.text = "Fault Points: " + scoreManager.getNegativeScore();
         timeScore.text = "Time Bonus: " + scoreManager.getTimeScore();
-        storyText.text = scoreManager.getStoryText();
+        text = scoreManager.getStoryText();
         nextScene = scoreManager.getNextScene();
         
 
@@ -44,6 +46,11 @@ public class InformationScript : MonoBehaviour {
         {
             transition.FadeToLevel ("Menu");
         }
+    }
+
+    public List<string> GetText()
+    {
+        return text;
     }
 
 }

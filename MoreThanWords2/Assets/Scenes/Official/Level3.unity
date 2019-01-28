@@ -1959,6 +1959,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4412769948753080, guid: 9ac2d65eea81af74fa9addfdf23fb860, type: 2}
       propertyPath: m_LocalPosition.x
       value: 75.602745
@@ -1994,6 +1999,23 @@ Prefab:
     - target: {fileID: 1522166155500342, guid: 9ac2d65eea81af74fa9addfdf23fb860, type: 2}
       propertyPath: m_Name
       value: Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena.Array.data[0]
+      value: 'To test his strength, Kallum had to face very powerful giants. It was
+        known all around the kingdom that this was a very peaceful species but, in
+        spite of this, the king decided to brainwash them with the help of his wizards,
+        only to turn them into slaves and take advantage of their strength.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena.Array.data[1]
+      value: 'Kallum also got to see some of the king''s wickedness as a young boy.
+        When he approached the supposedly kind monarch in the middle of a parade,
+        just to ask for some help for his poor family, he was immediately beaten down
+        by the guards and imprisoned. Eventually, the poor boy was released, having
+        seen the true nature of the monarch and with a clear purpose in mind. '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ac2d65eea81af74fa9addfdf23fb860, type: 2}

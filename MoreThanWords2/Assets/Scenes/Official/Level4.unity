@@ -2658,6 +2658,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4412769948753080, guid: 9ac2d65eea81af74fa9addfdf23fb860, type: 2}
       propertyPath: m_LocalPosition.x
       value: 75.602745
@@ -2689,6 +2694,27 @@ Prefab:
     - target: {fileID: 4412769948753080, guid: 9ac2d65eea81af74fa9addfdf23fb860, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena.Array.data[0]
+      value: 'The challenges got gradually harder, and our brave hero had also gotten
+        more and more exhausted. The last challenge had proven to be too much even
+        for him, but, on the bright side, he was closer than ever to achieve his goal,
+        with just one more challenge ahead of him.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena.Array.data[1]
+      value: 'After that, he would get crowned and would have a chance to consummate
+        his revenge on the king by killing him, and rule nobly over the kingdom, thus
+        becoming the fair monarch king Varghar had failed to be. With this in mind,
+        our hero continued in order to face his final challenge.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena.Array.data[2]
+      value: No one had still been able to conquer this one, would he be the first?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ac2d65eea81af74fa9addfdf23fb860, type: 2}

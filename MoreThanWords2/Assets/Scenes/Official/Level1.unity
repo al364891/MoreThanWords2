@@ -2730,6 +2730,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4412769948753080, guid: 9ac2d65eea81af74fa9addfdf23fb860, type: 2}
       propertyPath: m_LocalPosition.x
       value: 75.602745
@@ -2766,6 +2771,22 @@ Prefab:
         type: 2}
       propertyPath: levelKeys
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena.Array.data[0]
+      value: 'During his second challenge, Kallum had to master the power of elements
+        in order to defeat the enemies ahead. Apparently, a requirement for him and
+        the other contestants to become king. This infuriated him: king Varghar and
+        his ancestors were never tested in this way.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena.Array.data[1]
+      value: "During many years, he wondered why being born in a family or another
+        had to decide someone\u2019s fate. But that didn't matter now, the important
+        thing was that he now had the chance to set things right and take revenge
+        on the king, something he had also been waiting for years to accomplish.  "
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ac2d65eea81af74fa9addfdf23fb860, type: 2}
