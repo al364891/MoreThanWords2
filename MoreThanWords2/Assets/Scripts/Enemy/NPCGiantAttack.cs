@@ -37,7 +37,7 @@ public class NPCGiantAttack : Attacker
 
     public void CalculateImpact ()
     {
-        Debug.Log(x + " " + y);
+        //Debug.Log(x + " " + y);
         if (Vector2.Distance(new Vector2(x, y), new Vector2(player.transform.position.x, player.transform.position.y)) <= 4.5 && ((controller.m_FacingRight && player.transform.position.x >= x) || !controller.m_FacingRight && player.transform.position.x <= x))
         {
             //Debug.Log("get Hit");
@@ -53,7 +53,18 @@ public class NPCGiantAttack : Attacker
             Vector3 position = transform.position;
             position.y -= 30;
 
-            calculations.RecieveDamage(this.GetComponent<Enemy>());
+            if ((((int)Mathf.Abs(player.gameObject.transform.rotation.eulerAngles.y) >= (int)178 && controller.m_FacingRight) || ((int)Mathf.Abs(player.gameObject.transform.rotation.eulerAngles.y) == (int)0 && !controller.m_FacingRight)) && player.GetPlayerIsCovering())
+            {
+                //BLOCKED
+                //print("Blocked: Enemy Facing Right = " + controller.m_FacingRight + ", Player Facing Right: " + (player.gameObject.transform.rotation.eulerAngles.y == -180));
+                FindObjectOfType<AudioManager>().Play("arrowShield");
+            }
+            else
+            {
+                player.gameObject.GetComponent<AttackCalculate>().RecieveDamage(this.gameObject.GetComponent<Enemy>());
+            }
+
+            //calculations.RecieveDamage(this.GetComponent<Enemy>());
             //Invoke ("DoDamage", );
             //print ("hit");
         }
