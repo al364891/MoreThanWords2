@@ -1428,6 +1428,18 @@ Prefab:
       propertyPath: levelKeys
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
+        type: 2}
+      propertyPath: TextoSiguienteEscena
+      value: "In his third challenge, Kallum encountered the king\u2019s wizards.
+        Varghar had been assembling a whole army of them, highly trained in the use
+        of black magic, during quite some time. Whatever the king was ultimately planning
+        to achieve with his new army was unclear, but Kallum was sure he was up to
+        no good. He remembered that, when the young king Varghar was crowned, he was
+        said to be a kind and virtuous monarch. However, the cruel acts he had perpetrated
+        over the years were more than enough proof of his true nature. Our hero proceeded
+        into the next trial, knowing he was getting closer to his target."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ac2d65eea81af74fa9addfdf23fb860, type: 2}
   m_IsPrefabAsset: 0

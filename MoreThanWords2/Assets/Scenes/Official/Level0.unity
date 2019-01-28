@@ -1762,7 +1762,15 @@ Prefab:
     - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
         type: 2}
       propertyPath: TextoSiguienteEscena
-      value: patata
+      value: 'Kallum was a brave warrior, destined to accomplish great things. However,
+        achieving this would not prove easy to our hero. In fact, it would have been
+        impossible if fate hadn''t turned to him: king Varghar, dying and without
+        heirs, had to find a fit successor to the throne. Because of this, and with
+        the help of his counselors, the monarch created a series of challenges that
+        any candidate to the throne had to overcome in order to prove themselves worthy,
+        finding keys and facing other brave soldiers in order to progress. The first
+        challenge proved to be fairly easy to our hero, but many more were waiting
+        for him ahead... '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ac2d65eea81af74fa9addfdf23fb860, type: 2}
