@@ -47,5 +47,6 @@ public class DoorControl2 : MonoBehaviour
         GameObject.FindGameObjectWithTag("Manager").GetComponent<ScoreManagerScript>().NextScene = siguienteEscena;
         //SceneManager.LoadScene ("ScoreScene"); //Cambiar por el siguiente nivel cuando este
         transition.FadeToLevel ("ScoreScene");
+		FindObjectOfType<AudioManager>().Stop("usingMagic");
     }
 }
