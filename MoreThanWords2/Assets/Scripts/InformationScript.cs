@@ -35,7 +35,17 @@ public class InformationScript : MonoBehaviour {
 
         Destroy(manager);
     }
-	
+
+
+    private void Update ()
+    {
+        if (Input.GetKeyDown (KeyCode.Space) == true || Input.GetKeyDown (KeyCode.JoystickButton0) == true)
+        {
+            NextLevel ();
+        }
+    }
+
+
     public void NextLevel ()
     {
         if (GameController.gameController.save == true)

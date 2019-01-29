@@ -73,10 +73,10 @@ public class GameController : MonoBehaviour
     void Update()
     {
         // COMENTAR AL FINAL
-        if (Input.GetKeyDown (KeyCode.X) == true)
+        /*if (Input.GetKeyDown (KeyCode.X) == true)
         {
             Delete ();
-        }
+        }*/
 
         if (findObjects == true && SceneManager.GetActiveScene().name == "Menu")
         {

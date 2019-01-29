@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class TextTransitionManagerScript : MonoBehaviour {
 
@@ -36,7 +37,8 @@ public class TextTransitionManagerScript : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         if (inTransition)
         {
             transitionTimer += Time.deltaTime;
@@ -58,7 +60,20 @@ public class TextTransitionManagerScript : MonoBehaviour {
             }
             storyTextBox.color = currentColor;
         }
-	}
+        else
+        {
+            if (Input.GetKeyDown (KeyCode.RightArrow) == true || Input.GetAxis ("DPadX") > 0)
+            {
+                Next ();
+            }
+
+            if (Input.GetKeyDown (KeyCode.LeftArrow) == true || Input.GetAxis ("DPadX") < 0)
+            {
+                Previous ();
+            }
+        }
+    }
+
 
     public void ResetValues()
     {
@@ -111,7 +126,7 @@ public class TextTransitionManagerScript : MonoBehaviour {
         else if (index == maxIndex -1)
         {
             next.image.enabled = true;
-            next.GetComponentInChildren<Text>().text = "Next";
+            next.GetComponentInChildren<Text>().text = "Next ->";
         }
         if (index == 0)
         {
@@ -121,7 +136,7 @@ public class TextTransitionManagerScript : MonoBehaviour {
         else if (index == 1)
         {
             prev.image.enabled = true;
-            prev.GetComponentInChildren<Text>().text = "Prev";
+            prev.GetComponentInChildren<Text>().text = "<- Prev";
         }
     }
 }

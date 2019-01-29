@@ -23,7 +23,7 @@ public class ChaptersMenu : MonoBehaviour
 
         string levelName = GameController.gameController.CheckLastUnlocked ();
         available = (int) levelName[levelName.Length - 1] - 48;
-        print (available);
+        //print (available);
         /*switch (GameController.gameController.CheckLastUnlocked ())
         {
             case ("Level0"):
