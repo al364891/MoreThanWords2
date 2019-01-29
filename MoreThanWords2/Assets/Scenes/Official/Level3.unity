@@ -2051,8 +2051,8 @@ Prefab:
     - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
         type: 2}
       propertyPath: TextoSiguienteEscena.Array.data[1]
-      value: 'Kallum also got to see some of the king''s wickedness as a young boy.
-        When he approached the supposedly kind monarch in the middle of a parade,
+      value: 'Kallum also got to see some of the king''s wickedness as a young boy:
+        when he approached the supposedly kind monarch in the middle of a parade,
         just to ask for some help for his poor family, he was immediately beaten down
         by the guards and imprisoned. '
       objectReference: {fileID: 0}

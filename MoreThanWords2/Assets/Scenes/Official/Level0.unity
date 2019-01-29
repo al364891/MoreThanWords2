@@ -1782,7 +1782,7 @@ Prefab:
       propertyPath: TextoSiguienteEscena.Array.data[1]
       value: 'Because of this, and with the help of his counselors, the monarch created
         a series of challenges that any candidate to the throne had to overcome in
-        order to prove themselves worthy: Finding keys and facing other brave soldiers
+        order to prove themselves worthy, finding keys and facing other brave soldiers
         in order to progress.  '
       objectReference: {fileID: 0}
     - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
