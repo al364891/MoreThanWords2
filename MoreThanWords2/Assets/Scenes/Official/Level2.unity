@@ -1439,8 +1439,8 @@ Prefab:
       value: "In his third challenge, Kallum encountered the king\u2019s wizards.
         Varghar had been assembling a whole army of them, highly trained in the use
         of black magic, during quite some time. Whatever the king was ultimately planning
-        to achieve with his new army was unclear, but Kallum was sure he was up to
-        no good.  "
+        to achieve with his army was unclear, but Kallum was sure he was up to no
+        good.  "
       objectReference: {fileID: 0}
     - target: {fileID: 114144095586631684, guid: 9ac2d65eea81af74fa9addfdf23fb860,
         type: 2}
